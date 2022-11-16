@@ -1,14 +1,3 @@
-# Project configuration
-
-## Versions
-- npm version: 8.12.2 `npm --version`
-- node version: v14.17.3 `node --version`
-
-## Setup
-- Clone the repo to local machine
-- Run `npm install` to install dependencies from package.json
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
