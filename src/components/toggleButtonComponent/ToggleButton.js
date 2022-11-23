@@ -9,21 +9,25 @@ Example: <ToggleButton text="Jah" selectedColor="MediumSeaGreen" />
 */
 
 export default function ToggleButton(props) {
-   const [clicked, ClickHandler] = useState(false)
+   const isClicked = props.isClicked
 
-   if (clicked) {
-      return <button
-         className={classes.btn}
-         style={{background: props.selectedColor}}
-         onClick={() => ClickHandler(!clicked)}
-      >{props.text}
-      </button>
+   if (isClicked) {
+      return <div className={classes.div}>
+         <button
+            className={classes.btn}
+            style={{background: props.selectedColor}}
+         >{props.text}
+         </button>
+      </div>
    }
-   if (!clicked) {
-      return <button
-         className={classes.btn}
-         onClick={() => ClickHandler(!clicked)}
-      >{props.text}
-      </button>
+
+
+   if (!isClicked) {
+      return <div className={classes.div}>
+         <button
+            className={classes.btn}
+         >{props.text}
+         </button>
+      </div>
    }
 }
