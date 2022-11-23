@@ -2,21 +2,15 @@
     border: none;
     color: black;
     font: inherit;
-    font-size: 20px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    font-size: 18px;
     background-color: lightgrey;
     border-radius: 4px;
-    padding: 2px 10px;
+    padding: 3px 22px;
     transition-duration: 0s;
-
 }
 
-.div{
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
+.container{
+    margin: 10px 15px;
 }
 
 .btn:hover{
