@@ -1,0 +1,23 @@
+<svg width="472" height="569" viewBox="0 0 472 569" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_d_452_1031)">
+<rect x="213" width="255" height="162" rx="9" fill="url(#pattern0)" shape-rendering="crispEdges"/>
+</g>
+<rect x="213" width="14" height="447" fill="#050505"/>
+<path d="M453.5 544.437C453.5 544.437 357.115 568.937 226.5 568.937C95.8847 568.937 0.5 544.437 0.5 544.437C0.5 544.437 89.3847 375.937 220 375.937C350.615 375.937 453.5 544.437 453.5 544.437Z" fill="#C4C4AE"/>
+<defs>
+<filter id="filter0_d_452_1031" x="209" y="0" width="263" height="170" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_452_1031"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_452_1031" result="shape"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_452_1031" transform="scale(0.00392157 0.00617284)"/>
+</pattern>
+<image id="image0_452_1031" width="255" height="162" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACiCAIAAAABeoy0AAABa0lEQVR4nO3SQQ3AMBDAsLaQB3SUOhKT7hEbQR7Z63kXJJ3pABjjfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPxp33unG2DGmQ6AMe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99PlfrrcT5f76XI/Xe6ny/10uZ8u99P1ASWyBRRsavIRAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
