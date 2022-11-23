@@ -1,0 +1,16 @@
+@import "../../../src/index.css";
+
+.DeliveryMethodComponent {
+    margin: 1em auto;
+    font-family: "Rubik", serif;
+}
+
+
+h2 {
+    margin: 0 auto;
+}
+
+.CourierOptionContainer {
+    display: flex;
+    flex-direction: row;
+}
