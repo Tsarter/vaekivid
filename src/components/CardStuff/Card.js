@@ -17,7 +17,11 @@ function Card(props) {
   return (
     <div className={classes.card}>
       <div className={classes.image_div}>
-        <img className={classes.rock_image} src={props.image}></img>
+        <img
+          alt="Pilt kivist."
+          className={classes.rock_image}
+          src={props.image}
+        ></img>
       </div>
       <h2 className={classes.name_text}>{props.name}</h2>
       <h2 className={classes.price_text}>{props.price}</h2>
