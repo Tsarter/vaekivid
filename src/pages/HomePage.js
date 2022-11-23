@@ -1,5 +1,7 @@
+import QuestionWithAnswers from "../../src/components/questionWithAnswersComponent/QuestionWithAnswers.js"
+
 function HomePage() {
 
-    return "home"
+    return <QuestionWithAnswers/>
 }
 export default HomePage;

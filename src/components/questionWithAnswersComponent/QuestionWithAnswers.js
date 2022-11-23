@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import classes from "./QuestionWithAnswers.css"
 import ToggleButton from "../toggleButtonComponent/ToggleButton";
 
 

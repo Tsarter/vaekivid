@@ -16,6 +16,7 @@ export default function ToggleButton(props) {
          <button
             className={classes.btn}
             style={{background: props.selectedColor}}
+            onClick={props.onClick}
          >{props.text}
          </button>
       </div>
@@ -26,6 +27,7 @@ export default function ToggleButton(props) {
       return <div className={classes.div}>
          <button
             className={classes.btn}
+            onClick={props.onClick}
          >{props.text}
          </button>
       </div>
