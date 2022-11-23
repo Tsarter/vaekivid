@@ -1,0 +1,15 @@
+.toplevelContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex: 0 0 auto; /* Should be edited later to adjust the size of the left nad right containers. */
+}
+
+.leftContainer {
+
+}
+
+.rightContainer {
+
+}
