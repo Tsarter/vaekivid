@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
-import logo from "../../illustrations/logo.svg";
-import search from "../../illustrations/Search.svg";
-import user from "../../illustrations/User.svg";
-import cart from "../../illustrations/cart.svg";
+import logo from "../../assets/logo.svg";
+import search from "../../assets/Search.svg";
+import user from "../../assets/User.svg";
+import cart from "../../assets/cart.svg";
 function MainNavigation() {
   return (
     <header className={classes.header}>

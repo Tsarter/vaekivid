@@ -1,4 +1,4 @@
-import logo from "../../illustrations/logo.svg";
+import logo from "../../assets/logo.svg";
 import "./FooterComponent.css";
 
 function FooterComponent() {
