@@ -1,0 +1,44 @@
+@import "../../index.css";
+
+.footerContainer {
+    font-size: 16px;
+}
+
+.rowFlex {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.hrContainer hr {
+    border-radius: 5px;
+    border: 1px solid #404040;
+    box-shadow: 0 0 2px 0 black;
+    width: 20%;
+}
+
+.imgContainer {
+    --img-size: 5em;
+    width: var(--img-size);
+    height: var(--img-size);
+    margin: 20px auto;
+}
+
+.imgContainer img {
+    width: inherit;
+    height: inherit;
+}
+
+.buttonContainer {
+    width: 40em;
+}
+
+.text {
+    margin: 30px auto;
+    justify-content: center;
+    font-family: 'Rubik', serif;
+    font-style: normal;
+    font-weight: bold;
+}

@@ -1,0 +1,60 @@
+.card_table {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.treeSection {
+    display: grid;
+    grid-template: 80vh 1fr /25% 1fr 35%;
+    background-color: #D1D1C0;
+    height: 110vh;
+}
+
+.treeSection h1 {
+    align-self: center;
+    place-self: center;
+    font-size: 3rem;
+}
+
+.flag {
+    align-self: end;
+    width: 100%;
+}
+
+.trees {
+    width: 100%;
+    align-self: end;
+}
+
+.spacer {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave {
+    background-image: url("../assets/wave-haikei.svg");
+}
+
+.wavew {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+    background-image: url("../assets/wave-haikei.svg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shopSection {
+    padding-top: 30rem;
+}
