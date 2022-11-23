@@ -3,7 +3,7 @@ import kjall from "../assets/kjall.png";
 import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
-/* import wave from "../assets/wave-haikei.svg"; */
+import arrow from "../assets/Arrow 1.svg";
 function HomePage() {
   return (
     <div>
@@ -14,7 +14,26 @@ function HomePage() {
         </h1>
         <img alt="tree" className={classes.trees} src={trees}></img>
       </section>
-      <div className={[classes.wave, classes.spacer].join(" ")}></div>
+
+      <div className={[classes.wave1, classes.spacer].join(" ")}></div>
+
+      <section className={classes.saaJouduSection}>
+        <h1>
+          Saa <span>jõudu </span> Eesti
+          <br />
+          loodusest..
+        </h1>
+        <h1>
+          ...luues just <span>endale</span>
+          <br /> sobiva väekivi
+        </h1>
+        <button className="buttonMain">
+          Jätka<i></i>
+        </button>
+      </section>
+
+      <div className={[classes.wave2, classes.spacer].join(" ")}></div>
+
       <section className={classes.shopSection}>
         <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
         <div className={classes.card_table}>
