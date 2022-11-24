@@ -16,7 +16,8 @@ function CheckoutContainer() {
                 <CourierOptionComponent title="DPD" img={dpd} alt="DPD Logo" price="2,99 €"/>
             </DeliveryMethodComponent>
             <DeliveryMethodComponent title="Kuller">
-                <CourierOptionComponent title="Aadress" img={truck} alt="Truck" price="4,99 €"/>
+                <CourierOptionComponent title="Omniva" img={omniva} alt="Omniva Logo" price="4,29 €"/>
+                <CourierOptionComponent title="DPD" img={dpd} alt="DPD Logo" price="4,99 €"/>
             </DeliveryMethodComponent>
             <DeliveryMethodComponent title="Muu">
                 <CourierOptionComponent title="Katapult" img={catapult} alt="Catapult" price="Tasuta"/>
