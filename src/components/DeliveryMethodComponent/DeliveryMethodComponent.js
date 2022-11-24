@@ -6,12 +6,11 @@ import omniva from "../../assets/omniva.svg";
 function DeliveryMethodComponent(props) {
    return <div className="DeliveryMethodComponent">
       <h2>
-         {props.methodTitle}
+         {props.title}
       </h2>
       <hr/>
       <div className="CourierOptionContainer">
-         <CourierOptionComponent courierTitle="Omniva" img={omniva} alt="Omniva Logo" price="2.99$"/>
-         <CourierOptionComponent courierTitle="DPD" img={dpd} alt="DPD Logo" price="2.90$"/>
+         {props.children}
       </div>
    </div>
 

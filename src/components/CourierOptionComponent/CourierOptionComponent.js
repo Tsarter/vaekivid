@@ -11,7 +11,7 @@ function CourierOptionComponent(props) {
 
                 <img src={props.img} alt={props.alt} className="CourierImg"/>
                 <div className="CourierInfo">
-                    <h3 className="CourierName">{props.courierTitle}</h3>
+                    <h3 className="CourierName">{props.title}</h3>
                     <h4 className="CourierPrice">{props.price}</h4>
                 </div>
             </div>
