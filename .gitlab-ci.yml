@@ -27,7 +27,7 @@ pages:
   variables:
     GIT_STRATEGY: none # Do not clone git repo
     NODE_ENV: production
-    PUBLIC_URL: http://gitlab.cs.ttu.ee
+    PUBLIC_URL: https://tatall.pages.taltech.ee/iti0105-2022
   script:
     # Rename the CRA `build` folder to `public`
     - mv build public
