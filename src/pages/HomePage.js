@@ -3,7 +3,6 @@ import kjall from "../assets/kjall.png";
 import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
-import arrow from "../assets/Arrow 1.svg";
 function HomePage() {
   return (
     <div>
