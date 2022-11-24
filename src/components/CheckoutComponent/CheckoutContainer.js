@@ -12,19 +12,19 @@ function CheckoutContainer() {
         <div className="container">
             <h1 className="containerTitle">Vali tarneviis</h1>
             <DeliveryMethodComponent title="Pakiautomaat">
-                <CourierOptionComponent title="Omniva" img={omniva} alt="Omniva Logo" price="2,19 €"/>
-                <CourierOptionComponent title="DPD" img={dpd} alt="DPD Logo" price="2,99 €"/>
+                <CourierOptionComponent title="Omniva" img={omniva} alt="Omniva Logo" price="2,19 €" link=""/>
+                <CourierOptionComponent title="DPD" img={dpd} alt="DPD Logo" price="2,99 €" link=""/>
             </DeliveryMethodComponent>
             <DeliveryMethodComponent title="Kuller">
-                <CourierOptionComponent title="Omniva" img={omniva} alt="Omniva Logo" price="4,29 €"/>
-                <CourierOptionComponent title="DPD" img={dpd} alt="DPD Logo" price="4,99 €"/>
+                <CourierOptionComponent title="Omniva" img={omniva} alt="Omniva Logo" price="4,29 €" link=""/>
+                <CourierOptionComponent title="DPD" img={dpd} alt="DPD Logo" price="4,99 €" link=""/>
             </DeliveryMethodComponent>
             <DeliveryMethodComponent title="Muu">
-                <CourierOptionComponent title="Katapult" img={catapult} alt="Catapult" price="Tasuta"/>
-                <CourierOptionComponent title="Ise järgi" img={building} alt="Building" price="Tasuta"/>
+                <CourierOptionComponent title="Katapult" img={catapult} alt="Catapult" price="Tasuta" link=""/>
+                <CourierOptionComponent title="Ise järgi" img={building} alt="Building" price="Tasuta" link=""/>
             </DeliveryMethodComponent>
         </div>
-        )
+    )
 
 
 }

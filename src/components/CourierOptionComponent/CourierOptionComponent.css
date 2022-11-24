@@ -11,6 +11,14 @@
     max-width: 15em;
 }
 
+.CourierOptionComponent:hover {
+    background: #bdbdbd;
+}
+
+.CourierOptionComponent:active {
+    background: #b2b2b2;
+}
+
 .CourierInfo {
     display: flex;
     flex-direction: column;

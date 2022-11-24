@@ -1,12 +1,10 @@
 import "./CourierOptionComponent.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 function CourierOptionComponent(props) {
-
     return (
-
-        <Link>
+        <Link to={props.link}>
             <div className="CourierOptionComponent">
 
                 <img src={props.img} alt={props.alt} className="CourierImg"/>
@@ -16,9 +14,6 @@ function CourierOptionComponent(props) {
                 </div>
             </div>
         </Link>
-
-
-
     )
 }
 
