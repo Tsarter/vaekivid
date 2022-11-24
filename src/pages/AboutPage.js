@@ -3,8 +3,8 @@ import classes from "./AboutPage.module.css"
 function AboutPage() {
 
     return (
-       <div className={classes.container}>
-          <section>
+       <div className={classes.bigContainer}>
+          <section className={classes.smallContainer}>
               <h1>Meie eesmärk</h1>
               <p>
                  Väekivid on esimene Euroopa kivinduse superrakendus. Võitleme paremate kivide eest ja
@@ -13,7 +13,7 @@ function AboutPage() {
                  ja toidukaupade kohaletoomine...
               </p>
           </section>
-          <section>
+          <section className={classes.smallContainer}>
              <h1>100% kodumaine</h1>
              <p>
                 Usume, et enamik kivisid ei nõua isiklikku kivi kasutamist.
