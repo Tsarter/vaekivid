@@ -17,7 +17,7 @@
 .treeSection h1 {
     align-self: center;
     place-self: center;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .flag {
@@ -38,23 +38,49 @@
     background-size: cover;
 }
 
-.wave {
+.wave1 {
     background-image: url("../assets/wave-haikei.svg");
 }
 
-.wavew {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    height: 20vh;
-    width: 100%;
-    background-image: url("../assets/wave-haikei.svg");
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.wave2 {
+    background-image: url("../assets/wave-haikei2.svg");
+}
+
+.saaJouduSection {
+    height: 100vh;
+    display: grid;
+    grid-template: 10% 10% 10% 10% 10% 10% 1fr / 30% 1fr 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3E2E8;
+}
+
+.saaJouduSection>h1:nth-child(1) {
+    place-self: end;
+    align-self: end;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.saaJouduSection>h1:nth-child(2) {
+    grid-area: 3/3;
+    font-size: 3rem;
+}
+
+.saaJouduSection button {
+    grid-area: 6/1;
+    place-self: end;
+    align-self: end;
+    height: 6rem;
 }
 
 .shopSection {
     padding-top: 30rem;
+}
+
+.saaJouduSection button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: url("../assets/Arrow\ 1.svg");
 }
