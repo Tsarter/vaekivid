@@ -1,19 +1,19 @@
-import Card from "./components/Card";
-import kjall from "./assets/kjall.png"
-
+import { Routes, Route } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import HomePage from "./pages/HomePage";
+import Layout from "./components/layout/Layout";
 function App() {
   return (
-    <div>
-      <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
-      <div className="card-table">
-        <Card name="Kjallfrogenäider" price="21.99€" image={kjall}/>
-        <Card name="Kjallfrogenäider" price="21.99€" image={kjall}/>
-        <Card name="Kjallfrogenäider" price="21.99€" image={kjall}/>
-        <Card name="Kjallfrogenäider" price="21.99€" image={kjall}/>
-        <Card name="Kjallfrogenäider" price="21.99€" image={kjall}/>
-        <Card name="Kjallfrogenäider" price="21.99€" image={kjall}/>
-      </div>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/meist" element={<AboutPage />} />
+        <Route path="/blogi" element={<BlogPage />} />
+        <Route path="/ostukorv" element={<CheckoutPage />} />
+      </Routes>
+    </Layout>
   );
 }
 

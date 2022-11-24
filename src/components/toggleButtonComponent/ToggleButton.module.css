@@ -1,0 +1,19 @@
+.btn{
+    border: none;
+    color: black;
+    font: inherit;
+    font-size: 18px;
+    background-color: lightgrey;
+    border-radius: 4px;
+    padding: 3px 22px;
+    transition-duration: 0s;
+}
+
+.container{
+    margin: 10px 15px;
+}
+
+.btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
