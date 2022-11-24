@@ -1,5 +1,6 @@
 {
   "name": "vaekivid",
+  "homepage": "vaekivid",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
