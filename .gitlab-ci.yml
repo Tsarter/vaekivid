@@ -5,8 +5,17 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
 
 # Full project: https://gitlab.com/pages/plain-html
-build project:
+
+#workflow:
+#  rules:
+#    - if: $CI_COMMIT_BRANCH
+pages:
   image: node:15
   script:
     - npm install
     - npm run build
+  artifacts:
+    paths:
+      - build
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == "main"
