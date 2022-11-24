@@ -12,11 +12,11 @@ stages:
   - deploy
 
 build:
-  image: node:14.15.3-buster-slim
+  image: node:15
   stage: build
   script:
-    - yarn install
-    - yarn build
+    - npm install
+    - npm run build
   artifacts:
     paths:
       - build/
