@@ -59,12 +59,12 @@
     place-self: end;
     align-self: end;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .saaJouduSection>h1:nth-child(2) {
     grid-area: 3/3;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .saaJouduSection button {
@@ -75,12 +75,5 @@
 }
 
 .shopSection {
-    padding-top: 30rem;
-}
-
-.saaJouduSection button i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: url("../assets/Arrow\ 1.svg");
+    padding-top: 10rem;
 }
