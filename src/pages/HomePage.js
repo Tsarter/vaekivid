@@ -3,6 +3,7 @@ import kjall from "../assets/kjall.png";
 import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
+import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
 function HomePage() {
   return (
     <div>
@@ -26,9 +27,7 @@ function HomePage() {
           ...luues just <span>endale</span>
           <br /> sobiva väekivi
         </h1>
-        <button className="buttonMain">
-          Jätka<i></i>
-        </button>
+        <ButtonContinue />
       </section>
 
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
