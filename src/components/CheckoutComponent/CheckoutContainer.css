@@ -1,3 +1,5 @@
+@import "../../index.css";
+
 .container {
     font-size: 16px;
     background: #D9D9D9;
@@ -6,4 +8,9 @@
     box-shadow: 0 3px 3px 0 #4f4f4f;
     width: fit-content;
     height: fit-content;
+    font-family: "Rubik", serif;
+}
+
+.containerTitle {
+    margin: 0;
 }
