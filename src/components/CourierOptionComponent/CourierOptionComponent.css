@@ -48,11 +48,12 @@
 }
 
 .CourierName {
-
+    font-size: 1.5em;
 }
 
 .CourierPrice {
     margin: 0;
+    font-size: 1.4em;
 }
 
 h3 {
