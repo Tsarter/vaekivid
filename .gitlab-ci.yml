@@ -18,6 +18,8 @@ build:
   artifacts:
     paths:
       - build/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
 
 pages:
   image: alpine:latest
