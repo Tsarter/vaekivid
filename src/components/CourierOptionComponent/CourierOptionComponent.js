@@ -17,24 +17,26 @@ Courier Component:
 function CourierOptionComponent(props) {
     const id = useId();
     return (
-        <Link onClick={() => {
-            if (props.handleSelected.selected === id) {
-                props.handleSelected.useSelected(null);
-            }
-            else {
-                props.handleSelected.useSelected(id);
-            }
+        <div>
+            <Link onClick={() => {
+                if (props.handleSelected.selected === id) {
+                    props.handleSelected.useSelected(null);
+                }
+                else {
+                    props.handleSelected.useSelected(id);
+                }
 
-        }}>
-            <div className="CourierOptionComponent ">
-                <div className={`SelectedTab ${id === props.handleSelected.selected ? "" : "unselected"}`}/>
-                <img src={props.img} alt={props.alt} className="CourierImg"/>
-                <div className="CourierInfo">
-                    <h3 className="CourierName">{props.title}</h3>
-                    <h4 className="CourierPrice">{props.price}</h4>
+            }}>
+                <div className={`CourierOptionComponent ${id === props.handleSelected.selected ? "selected" : ""}`}>
+                    <img src={props.img} alt={props.alt} className="CourierImg"/>
+                    <div className="CourierInfo">
+                        <h3 className="CourierName">{props.title}</h3>
+                        <h4 className="CourierPrice">{props.price}</h4>
+                    </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+            {id === props.handleSelected.selected ? props.children : ""}
+        </div>
     )
 }
 

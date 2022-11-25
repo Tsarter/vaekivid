@@ -22,22 +22,13 @@
     background: #b2b2b2;
 }
 
-.SelectedTab {
-    height: inherit;
-    width: var(--padding);
-    /*Change the gradient colors as needed, cssgradient.io is good for that.*/
-    background: rgb(6,172,0);
-    background: linear-gradient(90deg, rgba(6,172,0,1) 0%, rgba(92,192,0,1) 68%);
-    position: relative;
-    top: 0;
-    left: calc(-1 * var(--padding));
-    transform: scaleY(150%);
+.selected {
+    background: rgb(6, 215, 0);
 }
 
-.unselected {
-   opacity: 0;
+.selected:hover {
+    background: rgb(7, 190, 1);
 }
-
 
 .CourierInfo {
     display: flex;
