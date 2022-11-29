@@ -11,10 +11,12 @@
 }
 
 .image{
-    width:auto;
+    width: 40%;
+    height: auto;
 }
 .image > img{
-    width: inherit;
+    height: 80%;
+    width: 80%;
 }
 
 .pricing{
