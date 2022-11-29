@@ -17,7 +17,7 @@ export default function ShoppingCartOverlay({handleShown}){
             <hr className={classes.underLine} />
          </div>
          <div>
-            <ShoppingCartItem img={kjall} price="21.99€">Tere see on esimene asi meie ostukorvis.</ShoppingCartItem>
+            <ShoppingCartItem img={kjall} price="21.99€">efeoifsofmefsoi fosief soifj seoijoij oieafaefae aef aeffea .</ShoppingCartItem>
          </div>
          <Link to="/ostukorv">
             <button onClick={() => handleShown.setClick(false)}>OSTA</button>
