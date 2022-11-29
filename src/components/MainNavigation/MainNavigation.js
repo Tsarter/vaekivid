@@ -3,7 +3,8 @@ import classes from "./MainNavigation.module.css";
 import logo from "../../assets/logo.svg";
 import search from "../../assets/Search.svg";
 import user from "../../assets/User.svg";
-import cart from "../../assets/cart.svg";
+import ShoppingCartButton from "../ShoppingCartOverlay/ShoppingCartButton";
+
 function MainNavigation() {
   return (
     <header className={classes.header}>
@@ -36,9 +37,7 @@ function MainNavigation() {
       <div className={classes.icons}>
         <img src={search} alt="otsing"></img>
         <img src={user} alt="kasutaja"></img>
-        <Link to="/ostukorv">
-          <img src={cart} alt="ostukorv"></img>
-        </Link>
+        <ShoppingCartButton />
       </div>
     </header>
   );

@@ -1,0 +1,27 @@
+.outerContainer{
+    top: 12vh;
+    right: 1vw;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    font-family: "Rubik", serif;
+    position: absolute;
+    max-width: 30%;
+    text-align: center;
+
+}
+
+.yourCart{
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+}
+
+.underLine{
+    width: 100%;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    border: 1.5px solid black;
+    border-radius: 50px;
+
+}

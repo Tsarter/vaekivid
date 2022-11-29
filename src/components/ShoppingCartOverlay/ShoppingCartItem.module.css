@@ -1,0 +1,31 @@
+.container{
+    width: auto;
+    height: 5em;
+    display: flex;
+}
+
+.description{
+    font: inherit;
+    font-size: 1em;
+    width: 100%;
+}
+
+.image{
+    width:auto;
+}
+.image > img{
+    width: inherit;
+}
+
+.pricing{
+    font-weight: bold;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 60%;
+    overflow-wrap: break-word;
+    text-align: left;
+}
