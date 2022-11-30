@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import logo from "../../assets/logo.svg";
-import search from "../../assets/Search.svg";
 import user from "../../assets/User.svg";
 import ShoppingCartButton from "../ShoppingCartOverlay/ShoppingCartButton";
+import SearchButtonComponent from "../SearchButtonComponent/SearchButtonComponent";
 
 function MainNavigation() {
   return (
@@ -35,7 +35,7 @@ function MainNavigation() {
         <img src={logo} alt="Väekivid logo"></img>
       </div>
       <div className={classes.icons}>
-        <img src={search} alt="otsing"></img>
+        <SearchButtonComponent/>
         <img src={user} alt="kasutaja"></img>
         <ShoppingCartButton />
       </div>

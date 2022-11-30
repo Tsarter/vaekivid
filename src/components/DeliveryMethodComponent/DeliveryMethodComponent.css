@@ -5,9 +5,13 @@
     font-family: "Rubik", serif;
 }
 
+hr {
+    border: 1px solid gray;
+}
 
 h2 {
     margin: 0 auto;
+    border-radius: 25%;
 }
 
 .CourierOptionContainer {

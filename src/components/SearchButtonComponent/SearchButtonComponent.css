@@ -1,0 +1,6 @@
+@import "../../index.css";
+
+.SearchButtonComponent > img:hover {
+    cursor: pointer;
+}
+
