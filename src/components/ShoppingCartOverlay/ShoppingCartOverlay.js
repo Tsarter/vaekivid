@@ -35,6 +35,5 @@ export default function ShoppingCartOverlay({handleShown}){
          </div>
       </div>
    )
-
 }
 

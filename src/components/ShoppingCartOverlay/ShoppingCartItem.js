@@ -12,8 +12,5 @@ export default function ShoppingCartItem(props) {
             <img src={props.img} alt="Kivi"/>
          </div>
       </div>
-
    )
-
-
 }
