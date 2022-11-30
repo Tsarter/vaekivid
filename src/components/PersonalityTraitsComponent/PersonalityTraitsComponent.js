@@ -10,8 +10,8 @@ export default function PersonalityTraitsComponent(props) {
                 <img className="HelpImg" src={help} alt="Abi"/>
             </div>
             <div className="ContentContainer">
-                <PersonalityTraitsSliderComponent title="Tujukas" default={0} maxval={3} minval={-3}/>
-                <PersonalityTraitsSliderComponent title="Sotsiaalsus" default={0} maxval={3} minval={-3}/>
+                <PersonalityTraitsSliderComponent title="Tujukas" default={0} maxval={6} minval={-20} color="red"/>
+                <PersonalityTraitsSliderComponent title="Sotsiaalsus" default={0} maxval={3} minval={-3} color="blue"/>
             </div>
 
         </section>

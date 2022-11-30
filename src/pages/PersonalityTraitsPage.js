@@ -4,7 +4,7 @@ import PersonalityTraitsComponent from "../components/PersonalityTraitsComponent
 export default function PersonalityTraitsPage() {
     return (
         <div className="PersonalityTraitsPage">
-            <PersonalityTraitsComponent title="Vali enda isikuomadused"/>
+            <PersonalityTraitsComponent title="Vali enda isikuomadused" color=""/>
         </div>
     );
 }
