@@ -84,8 +84,8 @@ function PersonalityTestPage() {
         />
         <QuestionWithAnswers
           children="5.Kas eelistad oma toiminguid tehes eelnevalt rahulikult läbi mõelda?"
-          yes=""
-          no=""
+          yes="I prefer to think things through calmly beforehand"
+          no="I don't think my actions through calmly beforehand."
           text="Jah"
           text2="Ei"
           id="5"
@@ -93,8 +93,8 @@ function PersonalityTestPage() {
         />
         <QuestionWithAnswers
           children="6.Kas pead alati oma lubadustest kinni, seda isegi siis, kui see võib Sulle ebamugavusi põhjustada?"
-          yes=""
-          no=""
+          yes="I always keep my promises, even when it might inconvenience me."
+          no="I never keep my promises."
           text="Jah"
           text2="Ei"
           id="6"
@@ -102,8 +102,8 @@ function PersonalityTestPage() {
         />
         <QuestionWithAnswers
           children="7.Kas Sinu meeleolu muutub tihti?"
-          yes=""
-          no=""
+          yes="My mood changes often."
+          no="My mood doesn't change often."
           text="Jah"
           text2="Ei"
           id="7"
@@ -111,6 +111,8 @@ function PersonalityTestPage() {
         />
         <QuestionWithAnswers
           children="8.Kas on õige, et tavaliselt räägid ja tegutsed Sa kiiresti ilma pikemalt järele mõtlemata?"
+          yes="Usually, I speak and act quickly without much thought."
+          no="I usually act slowly and think about things for a long time."
           text="Jah"
           text2="Ei"
           id="8"
@@ -118,96 +120,99 @@ function PersonalityTestPage() {
         />
         <QuestionWithAnswers
           children="9.Kas Sulle on kunagi tundunud, et oled „lõputult õnnetu” inimene, ilma et selleks konkreetset põhjust oleks olnud?"
+          yes='It seems to me that I am an "infinitely unhappy" person, for no particular reason that I know of.'
+          no='I have not felt like an "endlessly unhappy" person.'
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="10.Kas on õige, et oled valmis väga pingutama selle nimel, et end teistele tõestada?"
+          yes="I am ready to work hard to prove myself to others."
+          no="I'm not prepared to go out of my way to prove myself to others."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="11.Kas Sa kohmetud või muutud häbelikuks, kui tahad vestlusse astuda sümpaatse ja atraktiivse isikuga?"
+          yes="I get shy or embarrassed when I want to strike up a conversation with someone nice and attractive."
+          no="I like to strike up a conversation with a likeable and attractive person."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="12.Kas aeg-ajalt juhtub, et Sa lähed endast välja ja vihastad?"
+          yes="From time to time I lose my temper and get angry."
+          no="I never lose my temper or get angry."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="13.Kas tegutsed tihti hetkelise tuju ajel?"
+          yes="I often act on the spur of the moment."
+          no="I think several times before I act."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="14.Kas Sind jälitavad tihti mõtted sellest, mida oleks tulnud teisiti teha või öelda?"
+          yes="I am often haunted by thoughts of what I should have done differently."
+          no="I never think about what I could have done differently."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="15.Kas Sa eelistad head raamatut kohtumisele huvitavate inimestega?"
+          yes="I prefer a good book to meeting interesting people."
+          no="I prefer meeting interesting people to a good book."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="16.Kas on õige, et Sind on lihtne solvata või endast välja viia?"
+          yes="It's easy to offend me or make me lose my temper."
+          no="I never get offended or lose my temper."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="17.Kas Sulle meeldib sageli koos heade kaaslastega veidi lõõgastuda?"
+          yes="I often like to relax a bit with good company."
+          no="I prefer being alone."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="18.Kas Sul tuleb tihti pähe niisuguseid mõtteid, mida sa meeleldi varjaksid teiste eest?"
+          yes="I often have thoughts that I like to hide from others."
+          no="I never have thoughts that I would like to hide from others."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="19.Kas on õige, et Sa oled mõnikord nii energiast tulvil, et kõik lausa lendab käes, mõnikord aga muutud täiesti loiuks ja ükskõikseks ümbritseva suhtes?"
+          yes="Sometimes I'm so full of energy that everything just flies out of my hands, and sometimes I become completely lazy and indifferent to my surroundings."
+          no=""
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="20.Kas on õige, et eelistad omada vähem, kuid see-eest häid sõpru?"
+          yes="I prefer to have fewer, but good friends."
+          no="I prefer to have more, but not so good friends."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="21.Kas Sa unistad sageli?"
+          yes="I often dream."
+          no="I never dream."
           text="Jah"
           text2="Ei"
         />
         <QuestionWithAnswers
           children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
-          text="Jah"
-          text2="Ei"
-        />
-        <QuestionWithAnswers
-          children="23.Kas Sind piinab sageli süütunne?"
-          text="Jah"
-          text2="Ei"
-        />
-        <QuestionWithAnswers
-          children="24.Kas pead kõiki oma harjumusi meeldivaiks ja headeks?"
-          text="Jah"
-          text2="Ei"
-        />
-        <QuestionWithAnswers
-          children="25.Kas oled suuteline hästi lõbutsema ja end täiesti välja elama mõnel peol?"
-          text="Jah"
-          text2="Ei"
-        />
-        <QuestionWithAnswers
-          children="26.Kas Sinu kohta võib väita, et üsna sageli on Su närvid viimase piirini pingul?"
-          text="Jah"
-          text2="Ei"
-        />
-        <QuestionWithAnswers
-          children="27.Kas Sind loetakse lõbusaks ja elavaks seltskonnakaaslaseks?"
+          yes="When people shout at me, I shout back."
+          no="When people shout at me, I ignore them."
           text="Jah"
           text2="Ei"
         />
