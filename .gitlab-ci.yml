@@ -20,7 +20,7 @@ build:
       - build/
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-  allow_failure: true
+    "@typescript-eslint/no-unused-vars": ["warn"]
 
 pages:
   image: alpine:latest
@@ -38,4 +38,3 @@ pages:
       - public
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-  allow_failure: true
