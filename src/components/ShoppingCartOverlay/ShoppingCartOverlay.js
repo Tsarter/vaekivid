@@ -1,8 +1,9 @@
 import classes from "./ShoppingCartOverlay.module.css"
-import { Link } from "react-router-dom";
 import ShoppingCartItem from "./ShoppingCartItem";
 import "../../index.css"
 import kjall from "../../assets/kjall.png"
+import bolmen from"../../assets/bolmen.png"
+import NavigationButton from "../buttons/NavigationButton/NavigationButton";
 
 
 export default function ShoppingCartOverlay({handleShown}){
@@ -17,12 +18,21 @@ export default function ShoppingCartOverlay({handleShown}){
             <hr className={classes.underLine} />
          </div>
          <div>
-            <ShoppingCartItem img={kjall} price="21.99€">efeoifsofmefsoi fosief soifj seoijoij oieafaefae aef aeffea .</ShoppingCartItem>
+            <ShoppingCartItem img={kjall} price="21.99€">Kjallfrogenäider</ShoppingCartItem>
+            <ShoppingCartItem img={bolmen} price="18.99€">Bolmen</ShoppingCartItem>
          </div>
-         <Link to="/ostukorv">
-            <button onClick={() => handleShown.setClick(false)}>OSTA</button>
-         </Link>
-
+         <hr className={classes.underLine} />
+         <div className={classes.total}>
+            Summa: 40.98€
+         </div>
+         <div className={classes.navBtn}>
+            <NavigationButton
+               color="#30CF53"
+               link="/ostukorv"
+               clickFunc={() => handleShown.setClick(false)}>
+               OSTMA
+            </NavigationButton>
+         </div>
       </div>
    )
 

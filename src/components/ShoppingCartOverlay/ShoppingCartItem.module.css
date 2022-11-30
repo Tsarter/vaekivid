@@ -19,8 +19,9 @@
 }
 
 .image > img {
-    width: 80%;
+    width: 70%;
     height: 80%;
+    aspect-ratio: 1/1;
 }
 
 .pricing {
@@ -33,4 +34,16 @@
     width: 60%;
     overflow-wrap: break-word;
     text-align: left;
+}
+
+.remove{
+    text-align: left;
+    text-decoration: underline;
+    color: gray;
+
+}
+
+.remove:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }

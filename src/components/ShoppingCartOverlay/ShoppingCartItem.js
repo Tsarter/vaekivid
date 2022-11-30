@@ -6,12 +6,11 @@ export default function ShoppingCartItem(props) {
          <div className={classes.textContainer}>
             <div className={classes.description}>{props.children}</div>
             <div className={classes.pricing}>{props.price}</div>
+            <div className={classes.remove}>eemalda</div>
          </div>
          <div className={classes.image}>
             <img src={props.img} alt="Kivi"/>
          </div>
-
-
       </div>
 
    )
