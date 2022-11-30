@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ToggleButton from "../toggleButtonComponent/ToggleButton";
 import classes from "./QuestionWithAnswers.module.css";
-
+import { FormCtx } from "../form/form";
 /* Box with a question and two buttons, buttons and questions can freely be assigned text values.
 Buttons can also be assigned colours they turn to when clicked.
 5 inputs needed when using this component:
@@ -15,13 +15,15 @@ export default function QuestionWithAnswers(props) {
   const [clicked, isClicked] = useState(false);
   const [clicked2, isClicked2] = useState(false);
 
-  function clickHandler() {
-    isClicked(!clicked);
+  function clickHandlerYes() {
+    props.handleClick([props.yes, true]);
     isClicked2(false);
+    isClicked(true);
   }
 
-  function clickHandler2() {
-    isClicked2(!clicked2);
+  function clickHandlerNo() {
+    props.handleClick([props.no, false]);
+    isClicked2(true);
     isClicked(false);
   }
 
@@ -33,13 +35,13 @@ export default function QuestionWithAnswers(props) {
           text={props.text}
           color={props.color}
           isClicked={clicked}
-          onClick={clickHandler}
+          onClick={clickHandlerYes}
         />
         <ToggleButton
           text={props.text2}
           color={props.color2}
           isClicked={clicked2}
-          onClick={clickHandler2}
+          onClick={clickHandlerNo}
         />
       </div>
     </div>

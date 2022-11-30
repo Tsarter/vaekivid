@@ -1,11 +1,41 @@
 import classes from "./personalityTestPage.module.css";
 import QuestionWithAnswers from "../components/questionWithAnswersComponent/QuestionWithAnswers";
+import { useState } from "react";
+import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
 
 {
   /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ */
 }
 
 function PersonalityTestPage() {
+  const [dict, setCount] = useState({});
+  const handleClick = (valuePair) => {
+    // 👇️ take parameter passed from Child component
+    setCount((currentDict) => {
+      currentDict[valuePair[0]] = valuePair[1];
+      return currentDict;
+    });
+  };
+  const handleSubmit = () => {
+    let jsonToSend = { text: "", inventories: ["big5", "neo"], lang: "en" };
+    for (const [key, value] of Object.entries(dict)) {
+      jsonToSend.text += " " + key;
+    }
+
+    const options = {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "X-RapidAPI-Key": "a3cfb2e7e6msh4adb2d7cdb30727p19fcb5jsn002df6b5dfcb",
+        "X-RapidAPI-Host": "sentino.p.rapidapi.com",
+      },
+      body: JSON.stringify(jsonToSend),
+    };
+    fetch("https://sentino.p.rapidapi.com/score/text", options)
+      .then((response) => response.json())
+      .then((response) => console.log(response))
+      .catch((err) => console.error(err));
+  };
   return (
     <section className={classes.section}>
       <div className={classes.instructions}>
@@ -22,43 +52,69 @@ function PersonalityTestPage() {
       <div className={classes.questionsSection}>
         <QuestionWithAnswers
           children="1. Kas sa tunned tihti soovi uute elamuste järele, enese „väljaelamise” järele?"
+          yes="I often feel the need for new experiences."
+          no="I don't often feel the desire for new experiences."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="2.Kas tunned sageli, et vajad sõpru, kes sind mõistaksid ja lohutaksid?"
+          yes="I often feel that I need friends to understand and comfort me."
+          no="I never feel that I need friends to understand or comfort me."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
-          children="3.Kas pead end muretuks inimeseks – selliseks, keda on raske solvata?"
+          children="3.Kas pead end muretuks inimeseks - selliseks, keda on raske solvata?"
+          yes="I think of myself as a carefree person - someone who is hard to offend."
+          no="I think of myself as a troubled person - someone who is easily offended."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="4.Kas Sul on raske leppida „ei” vastusega ning oma soovidest ja plaanidest loobuda?"
+          yes="It's hard for me to take no for an answer and give up my wishes and plans."
+          no="It's easy for me to take no for an answer and give up my wishes and plans."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="5.Kas eelistad oma toiminguid tehes eelnevalt rahulikult läbi mõelda?"
+          yes=""
+          no=""
           text="Jah"
           text2="Ei"
+          id="5"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="6.Kas pead alati oma lubadustest kinni, seda isegi siis, kui see võib Sulle ebamugavusi põhjustada?"
+          yes=""
+          no=""
           text="Jah"
           text2="Ei"
+          id="6"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="7.Kas Sinu meeleolu muutub tihti?"
+          yes=""
+          no=""
           text="Jah"
           text2="Ei"
+          id="7"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="8.Kas on õige, et tavaliselt räägid ja tegutsed Sa kiiresti ilma pikemalt järele mõtlemata?"
           text="Jah"
           text2="Ei"
+          id="8"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="9.Kas Sulle on kunagi tundunud, et oled „lõputult õnnetu” inimene, ilma et selleks konkreetset põhjust oleks olnud?"
@@ -155,6 +211,9 @@ function PersonalityTestPage() {
           text="Jah"
           text2="Ei"
         />
+      </div>
+      <div onClick={handleSubmit} className={classes.button}>
+        <ButtonContinue onClick={handleSubmit} />
       </div>
     </section>
   );
