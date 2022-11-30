@@ -1,13 +1,33 @@
 @import "../../index.css";
 
 .CourierOptionComponent {
+    --padding: 0.8em;
+    --radius: 12px;
     display: flex;
     font-family: "Rubik", serif;
     background: #C5C5C5;
-    border-radius: 12px;
-    padding: 0.8em;
+    border-radius: var(--radius);
+    /*noinspection CssUnresolvedCustomProperty*/
+    padding: var(--padding);
     margin: 0 1em;
-    min-width: 10em;
+    width: 11em;
+    overflow: hidden;
+}
+
+.CourierOptionComponent:hover {
+    background: #bdbdbd;
+}
+
+.CourierOptionComponent:active {
+    background: #b2b2b2;
+}
+
+.selected {
+    background: rgb(6, 215, 0);
+}
+
+.selected:hover {
+    background: rgb(7, 190, 1);
 }
 
 .CourierInfo {
@@ -18,6 +38,8 @@
 }
 
 .CourierImg {
+    width: 3.5em;
+    height: 3.5em;
 
 }
 
@@ -26,11 +48,12 @@
 }
 
 .CourierName {
-
+    font-size: 1.5em;
 }
 
 .CourierPrice {
     margin: 0;
+    font-size: 1.4em;
 }
 
 h3 {

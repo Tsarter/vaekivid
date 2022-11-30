@@ -1,0 +1,29 @@
+@import "../../index.css";
+
+.DeliveryInfoComponent {
+    margin: 10px 10px 10px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: "Rubik";
+}
+
+.offset {
+    left: -14.6em;
+}
+
+.title {
+    margin-bottom: 5px;
+}
+
+.inputBox {
+    height: 2.4em;
+    border-radius: 0.6em;
+    border: none;
+    padding: 0 5px;
+    width: 100%;
+}
+
+.inputBox:focus{
+    outline: 1px solid rgb(7, 190, 1);
+}
