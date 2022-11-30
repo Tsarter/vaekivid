@@ -1,0 +1,21 @@
+@import "../../index.css";
+
+.PersonalityTraitsComponent {
+    font-size: 14px;
+    font-family: "Rubik", serif;
+    background: #E9E9E9;
+    width: fit-content;
+    padding: 1.5em 1em;
+    border-radius: 12px;
+}
+
+.TitleContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.HelpImg {
+    aspect-ratio: 1 / 1;
+    margin: 0 1em;
+}
