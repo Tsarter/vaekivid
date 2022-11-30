@@ -49,6 +49,7 @@ function PersonalityTestPage() {
           kuidas me käitume.
         </p>
       </div>
+      <div className={[classes.wave1, classes.spacer].join(" ")}></div>
       <div className={classes.questionsSection}>
         <QuestionWithAnswers
           children="1. Kas sa tunned tihti soovi uute elamuste järele, enese „väljaelamise” järele?"
