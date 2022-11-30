@@ -18,10 +18,8 @@
     height: auto;
 }
 
-.image > img {
-    width: 70%;
+.image>img {
     height: 80%;
-    aspect-ratio: 1/1;
 }
 
 .pricing {
@@ -36,13 +34,13 @@
     text-align: left;
 }
 
-.remove{
+.remove {
     text-align: left;
     text-decoration: underline;
     color: gray;
 }
 
-.remove:hover{
+.remove:hover {
     opacity: 0.8;
     cursor: pointer;
 }

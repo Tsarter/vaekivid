@@ -1,4 +1,4 @@
-.outerContainer{
+.outerContainer {
     top: 12vh;
     right: 1vw;
     box-sizing: border-box;
@@ -7,26 +7,25 @@
     border-radius: 8px;
     font-family: "Rubik", serif;
     position: absolute;
-    max-width: 30%;
+    max-width: 23rem;
     text-align: center;
-
 }
 
-.yourCart{
+.yourCart {
     font-size: 1.2em;
     padding-bottom: 0.3em;
 }
 
-.underLine{
+.underLine {
     width: 100%;
-    margin-top: 0.2em;
+    margin-top: 2px;
     margin-bottom: 1em;
-    border: 0.1em solid black;
-    border-radius: 50px;
-
+    height: 2px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 10px;
 }
 
-.total{
+.total {
     text-align: left;
     font: inherit;
     font-weight: bold;
@@ -34,6 +33,6 @@
     margin-bottom: 1em;
 }
 
-.navBtn{
+.navBtn {
     font-size: 1.1em;
 }
