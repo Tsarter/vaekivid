@@ -1,27 +1,17 @@
-* {
-    box-sizing: border-box;
-}
-
-.box{
-    background-color: whitesmoke;
+.box {
     border-radius: 4px;
     justify-content: center;
     align-items: center;
-    padding: 5px 20px;
-    width: 80%;
-    max-width: 1200px;
-    margin: 1rem 6rem;
-
+    /* max-width: 1200px; */
 }
 
-.question{
+.question {
     color: black;
     font: inherit;
     font-size: 16px;
     font-weight: bold;
 }
 
-.container{
+.container {
     display: flex;
-
 }

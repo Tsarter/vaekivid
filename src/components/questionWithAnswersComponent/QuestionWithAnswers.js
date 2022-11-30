@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ToggleButton from "../toggleButtonComponent/ToggleButton";
-import classes from "./QuestionWithAnswers.module.css"
+import classes from "./QuestionWithAnswers.module.css";
 
 /* Box with a question and two buttons, buttons and questions can freely be assigned text values.
 Buttons can also be assigned colours they turn to when clicked.
@@ -12,38 +12,36 @@ Buttons can also be assigned colours they turn to when clicked.
 Color reccommendation: MediumSeagreen & IndianRed
 */
 export default function QuestionWithAnswers(props) {
+  const [clicked, isClicked] = useState(false);
+  const [clicked2, isClicked2] = useState(false);
 
-   const [clicked, isClicked] = useState(false)
-   const [clicked2, isClicked2] = useState(false)
+  function clickHandler() {
+    isClicked(!clicked);
+    isClicked2(false);
+  }
 
-   function clickHandler() {
-      isClicked(!clicked);
-      isClicked2(false)
-   }
+  function clickHandler2() {
+    isClicked2(!clicked2);
+    isClicked(false);
+  }
 
-   function clickHandler2() {
-      isClicked2(!clicked2);
-      isClicked(false)
-   }
-
-   return (
-      <div className={classes.box}>
-         <p className={classes.question}>{props.children}</p>
-         <div className={classes.container}>
-         <ToggleButton
-            text={props.text}
-            color={props.color}
-            isClicked={clicked}
-            onClick={clickHandler}
-         />
-         <ToggleButton
-            text={props.text2}
-            color={props.color2}
-            isClicked={clicked2}
-            onClick={clickHandler2}
-         />
-         </div>
+  return (
+    <div className={classes.box}>
+      <p className={classes.question}>{props.children}</p>
+      <div className={classes.container}>
+        <ToggleButton
+          text={props.text}
+          color={props.color}
+          isClicked={clicked}
+          onClick={clickHandler}
+        />
+        <ToggleButton
+          text={props.text2}
+          color={props.color2}
+          isClicked={clicked2}
+          onClick={clickHandler2}
+        />
       </div>
-   )
-
+    </div>
+  );
 }

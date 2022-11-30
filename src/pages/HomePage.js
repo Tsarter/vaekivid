@@ -4,6 +4,7 @@ import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
+import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <div>
@@ -27,7 +28,7 @@ function HomePage() {
           ...luues just <span>endale</span>
           <br /> sobiva väekivi
         </h1>
-        <ButtonContinue />
+        <ButtonContinue destination="/iseloomuTest" />
       </section>
 
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>

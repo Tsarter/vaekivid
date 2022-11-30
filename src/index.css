@@ -1,38 +1,45 @@
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background-color: #F2F2F2;
-            font-family: "Rubik";
-            -webkit-transition: 0.2s;
-            -moz-transition: 0.2s;
-            -o-transition: 0.2s;
-            transition: 0.2s;
-        }
-        
-        a {
-            color: #1b1d20;
-            text-decoration: none;
-        }
-        
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin-block-end: 0;
-            margin-block-start: 0;
-        }
-        
-        code {
-            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-        }
-        
-        @font-face {
-            font-family: 'Rubik';
-            src: url('./fonts/Rubik-VariableFont_wght.ttf');
-        }
-        /* @font-face {
+:root {
+    --dark-text-color: #212429
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F2F2F2;
+    font-family: "Rubik";
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+a {
+    color: #1b1d20;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    color: #333333;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('./fonts/Rubik-VariableFont_wght.ttf');
+}
+
+
+/* @font-face {
     font-family: 'Rubik-SemiBold';
     src: url('./fonts/Rubik-SemiBold.woff2') format('woff2'), url('./fonts/Rubik-SemiBold.woff') format('woff');
     font-weight: 600;

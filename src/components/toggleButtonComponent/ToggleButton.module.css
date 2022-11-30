@@ -1,19 +1,19 @@
-.btn{
+.btn {
     border: none;
-    color: black;
+    color: var(--dark-text-color);
     font: inherit;
     font-size: 18px;
-    background-color: lightgrey;
+    background-color: #D9D9D9;
     border-radius: 4px;
     padding: 3px 22px;
-    transition-duration: 0s;
+    transition-duration: 0.4s;
 }
 
-.container{
+.container {
     margin: 10px 15px;
 }
 
-.btn:hover{
+.btn:hover {
     opacity: 0.8;
     cursor: pointer;
 }
