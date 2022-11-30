@@ -19,3 +19,8 @@
     aspect-ratio: 1 / 1;
     margin: 0 1em;
 }
+
+.ContentContainer {
+    display: flex;
+    flex-direction: column;
+}

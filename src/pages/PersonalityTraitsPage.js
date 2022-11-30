@@ -4,9 +4,7 @@ import PersonalityTraitsComponent from "../components/PersonalityTraitsComponent
 export default function PersonalityTraitsPage() {
     return (
         <div className="PersonalityTraitsPage">
-            isikuomadused
             <PersonalityTraitsComponent title="Vali enda isikuomadused"/>
-
         </div>
     );
 }
