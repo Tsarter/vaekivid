@@ -2,8 +2,12 @@ import classes from "./personalityTestPage.module.css";
 import QuestionWithAnswers from "../components/questionWithAnswersComponent/QuestionWithAnswers";
 import { useState } from "react";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
+import { createSlice, configureStore } from "redux";
+import { useNavigate } from "react-router-dom";
 {
-  /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ */
+  /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ 
+  api from https://rapidapi.com/bellatrics/api/sentino
+  */
 }
 
 function PersonalityTestPage() {
@@ -15,11 +19,37 @@ function PersonalityTestPage() {
       return currentDict;
     });
   };
+
+  /* const personalitySlice = (val) =>
+    createSlice({
+      name: "personalityText",
+      initialState: {
+        value: "",
+      },
+      reducers: {
+        addText: (state) => {
+          state.value += val;
+        },
+      },
+    }); */
+
+  const navigate = useNavigate();
+  const toComponentB = (text) => {
+    navigate("/iseloomutulemused", { state: text });
+  };
   const handleSubmit = () => {
     let jsonToSend = { text: "", inventories: ["big5", "neo"], lang: "en" };
     for (const [key, value] of Object.entries(dict)) {
       jsonToSend.text += " " + key;
     }
+    console.log("clicked");
+
+    /* const { addText } = personalitySlice.actions;
+    const store = configureStore({
+      reducer: personalitySlice.reducer,
+    });
+    store.dispatch(addText("hey"));
+    console.log(store.getState()); */
 
     const options = {
       method: "POST",
@@ -32,7 +62,10 @@ function PersonalityTestPage() {
     };
     fetch("https://sentino.p.rapidapi.com/score/text", options)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        toComponentB(response);
+      })
       .catch((err) => console.error(err));
   };
   return (
@@ -218,7 +251,7 @@ function PersonalityTestPage() {
         />
       </div>
       <div onClick={handleSubmit} className={classes.button}>
-        <ButtonContinue onClick={handleSubmit} />
+        <ButtonContinue />
       </div>
     </section>
   );

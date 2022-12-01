@@ -7,6 +7,7 @@ import Layout from "./components/layout/Layout";
 import PersonalityTraitsPage from "./pages/PersonalityTraitsPage";
 import PersonalityTestPage from "./pages/personalityTestPage";
 import ScrollToTop from "./components/ScrollToTop";
+import PersonalityResultsPage from "./pages/PersonalityTestResultsPage";
 function App() {
   return (
     <Layout>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/ostukorv" element={<CheckoutPage />} />
         <Route path="/iseloomutest" element={<PersonalityTestPage />} />
         <Route path="/isikuomadused" element={<PersonalityTraitsPage />} />
+        <Route path="/iseloomutulemused" element={<PersonalityResultsPage />} />
       </Routes>
     </Layout>
   );
