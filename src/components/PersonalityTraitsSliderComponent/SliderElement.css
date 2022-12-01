@@ -1,5 +1,4 @@
 @import "../../index.css";
-
 .SliderElement {
     background: #BAB8B8;
     width: 80%;
@@ -10,4 +9,5 @@
 .Painted {
     height: 0.8em;
     border-radius: 12px;
+    transition: all .4s cubic-bezier(0.54, 0.24, 0, 1.19);
 }

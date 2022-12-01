@@ -27,7 +27,7 @@ function HomePage() {
           ...luues just <span>endale</span>
           <br /> sobiva väekivi
         </h1>
-        <ButtonContinue destination="/iseloomuTest" />
+        <ButtonContinue destination="/isikuomadused" />
       </section>
 
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>

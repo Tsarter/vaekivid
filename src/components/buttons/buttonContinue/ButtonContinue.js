@@ -9,13 +9,15 @@ Style:
 */
 
 function ButtonContinue(props) {
+  const text = props.text || "Jätka";
   const navigate = useNavigate();
   return (
     <button
       className={classes.buttonMain}
       onClick={() => navigate(props.destination)}
     >
-      Jätka<i></i>
+      {text}
+      <i></i>
     </button>
   );
 }

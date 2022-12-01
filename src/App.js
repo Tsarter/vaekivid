@@ -6,7 +6,6 @@ import HomePage from "./pages/HomePage";
 import Layout from "./components/layout/Layout";
 import PersonalityTraitsPage from "./pages/PersonalityTraitsPage";
 import PersonalityTestPage from "./pages/personalityTestPage";
-import PersonalityTraitsPage from "./pages/PersonalityTraitsPage";
 function App() {
   return (
     <Layout>
