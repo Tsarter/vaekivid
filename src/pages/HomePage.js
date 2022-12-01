@@ -25,7 +25,7 @@ function HomePage() {
         </h1>
         <h1>
           ...luues just <span>endale</span>
-          <br /> sobiva väekivi
+          <br /> sobiv väekivi
         </h1>
         <ButtonContinue destination="/isikuomadused" />
       </section>

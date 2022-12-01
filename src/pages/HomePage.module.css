@@ -17,7 +17,7 @@
 .treeSection h1 {
     align-self: center;
     place-self: center;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .flag {
@@ -49,31 +49,71 @@
 .saaJouduSection {
     height: 100vh;
     display: grid;
-    grid-template: 10% 10% 10% 10% 10% 10% 1fr / 30% 1fr 30%;
+    grid-template: 30% 10% 10% 10% 10% 10% 1fr / 5% 1fr 30% 30% 5%;
     justify-content: center;
     align-items: center;
     background-color: #D3E2E8;
 }
 
 .saaJouduSection>h1:nth-child(1) {
-    place-self: end;
+    place-self: center;
     align-self: end;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
+    grid-area: 1/2;
+}
+
+.saaJouduSection span {
+    text-decoration: underline;
 }
 
 .saaJouduSection>h1:nth-child(2) {
-    grid-area: 3/3;
-    font-size: 4rem;
+    grid-area: 3/4;
+    font-size: 3rem;
 }
 
 .saaJouduSection button {
-    grid-area: 6/1;
-    place-self: end;
+    grid-area: 6/2;
+    place-self: center;
     align-self: end;
     height: 6rem;
 }
 
 .shopSection {
     padding-top: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .trees {
+        display: none;
+    }
+    .treeSection {
+        grid-template: 80vh 1fr /45% 1fr;
+    }
+    .saaJouduSection {
+        grid-template: 10% 1fr 10% 1fr 10% 10% 1fr / 5% 1fr 5%;
+    }
+    .saaJouduSection>h1:nth-child(1) {
+        grid-area: 2/2;
+        place-self: center;
+    }
+    .saaJouduSection>h1:nth-child(2) {
+        grid-area: 4/2;
+        place-self: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .trees {
+        display: none;
+    }
+    .flag {
+        grid-area: 2/1;
+        height: 60%;
+        place-self: start;
+    }
+    .treeSection {
+        grid-template: 1fr 1fr /1fr;
+    }
 }
