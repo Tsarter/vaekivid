@@ -2,7 +2,6 @@ import classes from "./personalityTestPage.module.css";
 import QuestionWithAnswers from "../components/questionWithAnswersComponent/QuestionWithAnswers";
 import { useState } from "react";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
-
 {
   /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ */
 }

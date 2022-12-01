@@ -6,9 +6,11 @@ import HomePage from "./pages/HomePage";
 import Layout from "./components/layout/Layout";
 import PersonalityTraitsPage from "./pages/PersonalityTraitsPage";
 import PersonalityTestPage from "./pages/personalityTestPage";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/meist" element={<AboutPage />} />
