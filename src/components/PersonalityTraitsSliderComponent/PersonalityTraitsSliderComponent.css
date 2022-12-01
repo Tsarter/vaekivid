@@ -1,0 +1,17 @@
+@import "../../index.css";
+
+.PersonalityTraitsSliderComponent {
+    margin: 1em 0 1em 2em;
+}
+
+.PersonalityTitle {
+    color: rgba(0, 0, 0, 0.57);
+    margin-bottom: 0.5em;
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

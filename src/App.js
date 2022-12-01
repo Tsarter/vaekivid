@@ -4,6 +4,7 @@ import BlogPage from "./pages/BlogPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./components/layout/Layout";
+import PersonalityTraitsPage from "./pages/PersonalityTraitsPage";
 import PersonalityTestPage from "./pages/personalityTestPage";
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/blogi" element={<BlogPage />} />
         <Route path="/ostukorv" element={<CheckoutPage />} />
         <Route path="/iseloomutest" element={<PersonalityTestPage />} />
+        <Route path="/isikuomadused" element={<PersonalityTraitsPage />} />
       </Routes>
     </Layout>
   );

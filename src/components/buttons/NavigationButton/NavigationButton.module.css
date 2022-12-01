@@ -1,0 +1,15 @@
+.btn {
+    border: none;
+    color: black;
+    font: inherit;
+    font-size: 1em;
+    background-color: lightgrey;
+    border-radius: 4px;
+    transition-duration: 0s;
+    padding: 0.5em 0.5em;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
