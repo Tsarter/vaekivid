@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import logo from "../../assets/logo.svg";
 import user from "../../assets/User.svg";
-import cart from "../../assets/cart.svg";
-
+import ShoppingCartButton from "../ShoppingCartOverlay/ShoppingCartButton";
 import SearchButtonComponent from "../SearchButtonComponent/SearchButtonComponent";
+
 function MainNavigation() {
   return (
     <header className={classes.header}>
@@ -37,9 +37,7 @@ function MainNavigation() {
       <div className={classes.icons}>
         <SearchButtonComponent/>
         <img src={user} alt="kasutaja"></img>
-        <Link to="/ostukorv">
-          <img src={cart} alt="ostukorv"></img>
-        </Link>
+        <ShoppingCartButton />
       </div>
     </header>
   );
