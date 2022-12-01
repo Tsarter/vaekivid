@@ -60,13 +60,15 @@ function PersonalityTestPage() {
       },
       body: JSON.stringify(jsonToSend),
     };
-    fetch("https://sentino.p.rapidapi.com/score/text", options)
+    // delete toComponentB() if going live
+    toComponentB({});
+    /* fetch("https://sentino.p.rapidapi.com/score/text", options)
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
         toComponentB(response);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err)); */
   };
   return (
     <section className={classes.section}>
