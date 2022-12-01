@@ -2,8 +2,12 @@ import classes from "./personalityTestPage.module.css";
 import QuestionWithAnswers from "../components/questionWithAnswersComponent/QuestionWithAnswers";
 import { useState } from "react";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
+import { createSlice, configureStore } from "redux";
+import { useNavigate } from "react-router-dom";
 {
-  /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ */
+  /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ 
+  api from https://rapidapi.com/bellatrics/api/sentino
+  */
 }
 
 function PersonalityTestPage() {
@@ -15,11 +19,37 @@ function PersonalityTestPage() {
       return currentDict;
     });
   };
+
+  /* const personalitySlice = (val) =>
+    createSlice({
+      name: "personalityText",
+      initialState: {
+        value: "",
+      },
+      reducers: {
+        addText: (state) => {
+          state.value += val;
+        },
+      },
+    }); */
+
+  const navigate = useNavigate();
+  const toComponentB = (text) => {
+    navigate("/iseloomutulemused", { state: text });
+  };
   const handleSubmit = () => {
     let jsonToSend = { text: "", inventories: ["big5", "neo"], lang: "en" };
     for (const [key, value] of Object.entries(dict)) {
       jsonToSend.text += " " + key;
     }
+    console.log("clicked");
+
+    /* const { addText } = personalitySlice.actions;
+    const store = configureStore({
+      reducer: personalitySlice.reducer,
+    });
+    store.dispatch(addText("hey"));
+    console.log(store.getState()); */
 
     const options = {
       method: "POST",
@@ -30,9 +60,14 @@ function PersonalityTestPage() {
       },
       body: JSON.stringify(jsonToSend),
     };
+    // delete toComponentB() if going live
+    // toComponentB({});
     fetch("https://sentino.p.rapidapi.com/score/text", options)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        toComponentB(response);
+      })
       .catch((err) => console.error(err));
   };
   return (
@@ -124,6 +159,7 @@ function PersonalityTestPage() {
           no='I have not felt like an "endlessly unhappy" person.'
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="10.Kas on õige, et oled valmis väga pingutama selle nimel, et end teistele tõestada?"
@@ -131,6 +167,7 @@ function PersonalityTestPage() {
           no="I'm not prepared to go out of my way to prove myself to others."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="11.Kas Sa kohmetud või muutud häbelikuks, kui tahad vestlusse astuda sümpaatse ja atraktiivse isikuga?"
@@ -138,6 +175,7 @@ function PersonalityTestPage() {
           no="I like to strike up a conversation with a likeable and attractive person."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="12.Kas aeg-ajalt juhtub, et Sa lähed endast välja ja vihastad?"
@@ -145,6 +183,7 @@ function PersonalityTestPage() {
           no="I never lose my temper or get angry."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="13.Kas tegutsed tihti hetkelise tuju ajel?"
@@ -152,6 +191,7 @@ function PersonalityTestPage() {
           no="I think several times before I act."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="14.Kas Sind jälitavad tihti mõtted sellest, mida oleks tulnud teisiti teha või öelda?"
@@ -159,6 +199,7 @@ function PersonalityTestPage() {
           no="I never think about what I could have done differently."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="15.Kas Sa eelistad head raamatut kohtumisele huvitavate inimestega?"
@@ -166,6 +207,7 @@ function PersonalityTestPage() {
           no="I prefer meeting interesting people to a good book."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="16.Kas on õige, et Sind on lihtne solvata või endast välja viia?"
@@ -173,6 +215,7 @@ function PersonalityTestPage() {
           no="I never get offended or lose my temper."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="17.Kas Sulle meeldib sageli koos heade kaaslastega veidi lõõgastuda?"
@@ -180,6 +223,7 @@ function PersonalityTestPage() {
           no="I prefer being alone."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="18.Kas Sul tuleb tihti pähe niisuguseid mõtteid, mida sa meeleldi varjaksid teiste eest?"
@@ -187,6 +231,7 @@ function PersonalityTestPage() {
           no="I never have thoughts that I would like to hide from others."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="19.Kas on õige, et Sa oled mõnikord nii energiast tulvil, et kõik lausa lendab käes, mõnikord aga muutud täiesti loiuks ja ükskõikseks ümbritseva suhtes?"
@@ -194,6 +239,7 @@ function PersonalityTestPage() {
           no=""
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="20.Kas on õige, et eelistad omada vähem, kuid see-eest häid sõpru?"
@@ -201,6 +247,7 @@ function PersonalityTestPage() {
           no="I prefer to have more, but not so good friends."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="21.Kas Sa unistad sageli?"
@@ -208,6 +255,7 @@ function PersonalityTestPage() {
           no="I never dream."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
         <QuestionWithAnswers
           children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
@@ -215,10 +263,11 @@ function PersonalityTestPage() {
           no="When people shout at me, I ignore them."
           text="Jah"
           text2="Ei"
+          handleClick={handleClick}
         />
       </div>
       <div onClick={handleSubmit} className={classes.button}>
-        <ButtonContinue onClick={handleSubmit} />
+        <ButtonContinue />
       </div>
     </section>
   );
