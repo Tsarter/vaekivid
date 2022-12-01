@@ -1,0 +1,44 @@
+.instructions {
+    padding-left: 10vw;
+    padding-right: 5vw;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-color: #E9E9E9;
+}
+
+.questionsSection {
+    padding-left: 10vw;
+    padding-right: 5vw;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.instructions p {
+    max-width: 1000px;
+}
+
+.questionsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.button {
+    padding-left: 10vh;
+    margin: 2rem;
+    margin-bottom: 15rem;
+}
+
+.spacer {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave1 {
+    background-image: url("../assets/wave-haikeiWhiteGray.svg");
+    transform: scaleX(-1);
+    /* transform: rotate(); */
+}
