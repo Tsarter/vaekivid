@@ -6,7 +6,7 @@ export default function PersonalityTraitsPage() {
   return (
     <div className="PersonalityTraitsPage">
       <PersonalityTraitsComponent title="Vali enda isikuomadused" color="" />
-      <ButtonContinue text="Test" destiantion="/iseloomutest" />
+      <ButtonContinue text="Test" destination="/iseloomutest" />
     </div>
   );
 }
