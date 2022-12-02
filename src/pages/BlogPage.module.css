@@ -1,0 +1,42 @@
+
+
+.BlogPage {
+    margin: auto;
+    width: 80%;
+}
+
+.Socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.Socials > * {
+    padding: 0 5px;
+}
+
+.title {
+    text-wrap: normal;
+    width: 50%;
+    font-size: 2.2em;
+}
+
+.date {
+    font-weight: normal;
+    margin: 0.5em 0;
+}
+
+.gray {
+    color: rgba(33, 36, 41, 0.67);
+}
+
+.mainContent {
+    width: inherit;
+}
+
+.mainContent > img {
+    width: inherit;
+    aspect-ratio: 16/9;
+}
