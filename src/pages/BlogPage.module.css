@@ -1,8 +1,14 @@
 
+.TopContainer {
+    width: 100%;
+    height: max-content;
+    margin: 1em 0;
+
+}
 
 .BlogPage {
     margin: auto;
-    width: 80%;
+    width: 75%;
 }
 
 .Socials {
@@ -26,6 +32,7 @@
 .date {
     font-weight: normal;
     margin: 0.5em 0;
+    width: fit-content;
 }
 
 .gray {
@@ -33,7 +40,7 @@
 }
 
 .mainContent {
-    width: inherit;
+    width: 80%;
 }
 
 .mainContent > img {
