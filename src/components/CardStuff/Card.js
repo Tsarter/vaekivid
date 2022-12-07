@@ -2,17 +2,11 @@ import { useState } from "react";
 import Modal from "./Modal";
 import Backdrop from "./Backdrop";
 import classes from "./Card.module.css";
-
+import { useDispatch } from "react-redux";
+import { addItem } from "../../features/cart/cartSlice";
+import { removeFromStorage } from "../../features/storage/storageSlice";
 function Card(props) {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  function deleteHandler() {
-    setModalIsOpen(true);
-  }
-
-  function closeModalHandler() {
-    setModalIsOpen(false);
-  }
+  const dispatch = useDispatch();
 
   return (
     <div className={classes.card}>
@@ -26,14 +20,16 @@ function Card(props) {
       <h2 className={classes.name_text}>{props.name}</h2>
       <h2 className={classes.price_text}>{props.price}</h2>
       <div className={classes.actions}>
-        <button className={classes.btn} onClick={deleteHandler}>
+        <button
+          className={classes.btn}
+          onClick={() => {
+            dispatch(addItem(props.item));
+            dispatch(removeFromStorage(props.id));
+          }}
+        >
           Lisa korvi
         </button>
       </div>
-      {modalIsOpen && (
-        <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
-      )}
-      {modalIsOpen && <Backdrop onClick={closeModalHandler} />}
     </div>
   );
 }

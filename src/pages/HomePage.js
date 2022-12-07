@@ -4,7 +4,11 @@ import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../features/cart/cartSlice";
 function HomePage() {
+  const dispatch = useDispatch();
+  const { storage } = useSelector((state) => state.storage);
   return (
     <div>
       <section className={classes.treeSection}>
@@ -14,9 +18,7 @@ function HomePage() {
         </h1>
         <img alt="tree" className={classes.trees} src={trees}></img>
       </section>
-
       <div className={[classes.wave1, classes.spacer].join(" ")}></div>
-
       <section className={classes.saaJouduSection}>
         <h1>
           Saa <span>jõudu </span> Eesti
@@ -29,19 +31,24 @@ function HomePage() {
         </h1>
         <ButtonContinue destination="/isikuomadused" />
       </section>
-
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
-
       <section className={classes.shopSection}>
         <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
         <div className={classes.card_table}>
-          <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
-          <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
-          <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
-          <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
-          <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
-          <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
+          {storage.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                id={item.id}
+                name={item.fields.title}
+                price={item.fields.price}
+                image={item.fields.image[0].url}
+                item={item}
+              />
+            );
+          })}
         </div>
+        <button onClick={() => dispatch(clearCart())}></button>
       </section>
     </div>
   );
