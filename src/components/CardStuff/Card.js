@@ -2,8 +2,12 @@ import { useState } from "react";
 import Modal from "./Modal";
 import Backdrop from "./Backdrop";
 import classes from "./Card.module.css";
+import { useDispatch } from "react-redux";
+import { removeItem } from "../../features/cart/cartSlice";
 
 function Card(props) {
+  console.log(props.image);
+  const dispatch = useDispatch();
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function deleteHandler() {
@@ -26,7 +30,13 @@ function Card(props) {
       <h2 className={classes.name_text}>{props.name}</h2>
       <h2 className={classes.price_text}>{props.price}</h2>
       <div className={classes.actions}>
-        <button className={classes.btn} onClick={deleteHandler}>
+        <button
+          className={classes.btn}
+          onClick={() => {
+            deleteHandler();
+            dispatch(removeItem(props.id));
+          }}
+        >
           Lisa korvi
         </button>
       </div>
