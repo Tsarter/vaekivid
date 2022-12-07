@@ -8,8 +8,7 @@ import { useSelector } from "react-redux";
 
 export default function ShoppingCartOverlay({ handleShown }) {
   // redux magic
-  const { cartItems } = useSelector((state) => state.cart);
-
+  const { total, cartItems } = useSelector((state) => state.cart);
   const isClicked = handleShown.isClicked;
 
   if (!isClicked) return null;
@@ -35,7 +34,7 @@ export default function ShoppingCartOverlay({ handleShown }) {
         })}
       </div>
       <div className={classes.underLine} />
-      <div className={classes.total}>Summa: 40.98€</div>
+      <div className={classes.total}>Summa: {total}€</div>
       <div className={classes.navBtn}>
         <NavigationButton
           color="#30CF53"
