@@ -18,9 +18,7 @@ function HomePage() {
         </h1>
         <img alt="tree" className={classes.trees} src={trees}></img>
       </section>
-
       <div className={[classes.wave1, classes.spacer].join(" ")}></div>
-
       <section className={classes.saaJouduSection}>
         <h1>
           Saa <span>jõudu </span> Eesti
@@ -33,19 +31,19 @@ function HomePage() {
         </h1>
         <ButtonContinue destination="/isikuomadused" />
       </section>
-
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
-
       <section className={classes.shopSection}>
         <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
         <div className={classes.card_table}>
           {storage.map((item) => {
             return (
               <Card
+                key={item.id}
                 id={item.id}
                 name={item.fields.title}
                 price={item.fields.price}
                 image={item.fields.image[0].url}
+                item={item}
               />
             );
           })}

@@ -4,8 +4,12 @@ import "../../index.css";
 import kjall from "../../assets/kjall.png";
 import bolmen from "../../assets/bolmen.png";
 import NavigationButton from "../buttons/NavigationButton/NavigationButton";
+import { useSelector } from "react-redux";
 
 export default function ShoppingCartOverlay({ handleShown }) {
+  // redux magic
+  const { cartItems } = useSelector((state) => state.cart);
+
   const isClicked = handleShown.isClicked;
 
   if (!isClicked) return null;
@@ -17,12 +21,18 @@ export default function ShoppingCartOverlay({ handleShown }) {
         <div className={classes.underLine} />
       </div>
       <div>
-        <ShoppingCartItem img={kjall} price="21.99€">
-          Kjallfrogenäider
-        </ShoppingCartItem>
-        <ShoppingCartItem img={bolmen} price="18.99€">
-          Bolmen
-        </ShoppingCartItem>
+        {cartItems.map((item) => {
+          return (
+            <ShoppingCartItem
+              key={item.id}
+              img={item.fields.image[0].url}
+              price={item.fields.price}
+              item={item}
+            >
+              {item.fields.title}
+            </ShoppingCartItem>
+          );
+        })}
       </div>
       <div className={classes.underLine} />
       <div className={classes.total}>Summa: 40.98€</div>

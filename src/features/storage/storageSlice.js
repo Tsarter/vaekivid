@@ -27,8 +27,11 @@ const storageSlice = createSlice({
   name: "storage",
   initialState,
   reducers: {
-    removeItem: (state, { payload }) => {
-      state.cartItems = state.cartItems.filter((item) => item.id !== payload);
+    removeFromStorage: (state, { payload }) => {
+      state.storage = state.storage.filter((item) => item.id !== payload);
+    },
+    addToStorage: (state, { payload }) => {
+      state.storage.push(payload);
     },
   },
   extraReducers: {
@@ -48,6 +51,6 @@ const storageSlice = createSlice({
 });
 
 //console.log(cartSlice);
-export const { removeItem } = storageSlice.actions;
+export const { removeFromStorage, addToStorage } = storageSlice.actions;
 
 export default storageSlice.reducer;
