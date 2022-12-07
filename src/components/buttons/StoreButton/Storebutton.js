@@ -1,15 +1,17 @@
 import classes from "./StoreButton.module.css"
 
 export default function StoreButton() {
-   const HandleClickScroll = () => {
-      const element = document.getElementById("rockstore");
-      if (element) {
-         element.scrollIntoView({behavior: "smooth"});
-      }
-   };
    return (
-      <div onClick={HandleClickScroll} className = {classes.store}>
-         <h4>Pood</h4>
+      <div className={classes.store}
+           onClick={() => {
+              setTimeout(() => {
+                 console.log("hey");
+                 var access = document.getElementById("shop");
+                 access.scrollIntoView({behavior: "smooth"}, true);
+              }, 50);
+           }}
+      >
+         <h4 className={classes.store}>Pood</h4>
       </div>
    )
 }
