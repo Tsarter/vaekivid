@@ -11,7 +11,6 @@ export default function ShoppingCartButton() {
     isClicked: isClicked,
     setClick: (e) => setClick(e),
   };
-  console.log(amount);
   return (
     <div className={classes.cartDiv}>
       {amount != 0 && (

@@ -40,12 +40,11 @@ const storageSlice = createSlice({
     },
     [getStorageItems.fulfilled]: (state, action) => {
       state.isLoading = false;
-      console.log("a", action.payload);
       state.storage = action.payload.records;
     },
     [getStorageItems.rejected]: (state) => {
       state.isLoading = false;
-      console.log("err");
+      console.log("erroro");
     },
   },
 });

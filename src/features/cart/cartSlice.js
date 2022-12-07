@@ -33,7 +33,6 @@ const cartSlice = createSlice({
   },
 });
 
-//console.log(cartSlice);
 export const { clearCart, removeItem, addItem, calculateTotals } =
   cartSlice.actions;
 
