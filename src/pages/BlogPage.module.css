@@ -1,0 +1,49 @@
+
+.TopContainer {
+    width: 70%;
+    height: max-content;
+    margin: 2em auto 4em auto;
+}
+
+.BlogPage {
+    width: 100%;
+    margin: 0 0 0 2em;
+}
+
+.Socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.Socials > * {
+    padding: 0 5px;
+}
+
+.title {
+    text-wrap: normal;
+    width: 50%;
+    font-size: 2.2em;
+}
+
+.date {
+    font-weight: normal;
+    margin: 0.5em 0;
+    width: fit-content;
+}
+
+.gray {
+    color: rgba(33, 36, 41, 0.67);
+}
+
+.mainContent {
+    width: 80%;
+    font-size: 1.2em;
+}
+
+.mainContent > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
