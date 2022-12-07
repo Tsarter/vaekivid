@@ -33,7 +33,7 @@ function HomePage() {
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
 
       <section className={classes.shopSection}>
-        <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
+        <h1 id = "rockstore">Või vali mõni spetsialistide poolt loodud väekivi</h1>
         <div className={classes.card_table}>
           <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />
           <Card name="Kjallfrogenäider" price="21.99€" image={kjall} />

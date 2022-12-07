@@ -4,6 +4,8 @@ import logo from "../../assets/logo.svg";
 import user from "../../assets/User.svg";
 import ShoppingCartButton from "../ShoppingCartOverlay/ShoppingCartButton";
 import SearchButtonComponent from "../SearchButtonComponent/SearchButtonComponent";
+import StoreButton from "../buttons/StoreButton/Storebutton";
+
 
 function MainNavigation() {
   return (
@@ -24,11 +26,9 @@ function MainNavigation() {
             <h4>Blogi</h4>
           </Link>
         </div>
-        <div>
-          <Link to="/">
-            <h4>Pood</h4>
-          </Link>
-        </div>
+         <Link to="/">
+            <StoreButton />
+         </Link>
       </div>
       <div className={classes.logo}>
         <div className={classes.logo_text}>Väekivid</div>
