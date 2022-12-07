@@ -5,7 +5,6 @@ export default function StoreButton() {
       <div className={classes.store}
            onClick={() => {
               setTimeout(() => {
-                 console.log("hey");
                  var access = document.getElementById("shop");
                  access.scrollIntoView({behavior: "smooth"}, true);
               }, 50);
