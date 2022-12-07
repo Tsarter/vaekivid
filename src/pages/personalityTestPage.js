@@ -2,7 +2,7 @@ import classes from "./personalityTestPage.module.css";
 import QuestionWithAnswers from "../components/questionWithAnswersComponent/QuestionWithAnswers";
 import { useState } from "react";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
-import { createSlice, configureStore } from "redux";
+// import { createSlice, configureStore } from "redux";
 import { useNavigate } from "react-router-dom";
 {
   /*Questions taken from https://sellavio.ee/test/eysencki-temperamenditest/ 
@@ -60,15 +60,16 @@ function PersonalityTestPage() {
       },
       body: JSON.stringify(jsonToSend),
     };
-    // delete toComponentB() if going live
-    // toComponentB({});
-    fetch("https://sentino.p.rapidapi.com/score/text", options)
+    // toComponentB() for fake data
+    toComponentB({});
+    // fetch() for real data
+    /* fetch("https://sentino.p.rapidapi.com/score/text", options)
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
         toComponentB(response);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err)); */
   };
   return (
     <section className={classes.section}>
