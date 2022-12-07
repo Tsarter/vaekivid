@@ -5,16 +5,19 @@ import sentinoExample from "../test_data/sentino_example";
 function PersonalityResultsPage() {
   const location = useLocation();
   const sentino = location.state;
-  // fake data
+  // for fake data
+  console.log(sentinoExample.scoring.neo);
   const neoFake = sentinoExample.scoring.neo;
-  const neo = sentino.scoring.neo;
+  // for real data
+  //const neo = sentino.scoring.neo;
   let text = "";
 
-  for (const property in neo) {
+  for (const property in neoFake) {
+    console.log(property);
     text +=
       property +
       ":  " +
-      Math.round(neo[property].score * 10 + Number.EPSILON) / 10 +
+      Math.round(neoFake[property].score * 10 + Number.EPSILON) / 10 +
       " ";
   }
   return <p>{text}</p>;
