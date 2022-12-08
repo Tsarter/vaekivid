@@ -25,7 +25,16 @@ function MainNavigation() {
           </Link>
         </div>
         <div>
-          <Link to="/">
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                console.log("hey");
+                var access = document.getElementById("shop");
+                access.scrollIntoView({ behavior: "smooth" }, true);
+              }, 750);
+            }}
+            to="/"
+          >
             <h4>Pood</h4>
           </Link>
         </div>
@@ -35,7 +44,7 @@ function MainNavigation() {
         <img src={logo} alt="Väekivid logo"></img>
       </div>
       <div className={classes.icons}>
-        <SearchButtonComponent/>
+        <SearchButtonComponent />
         <img src={user} alt="kasutaja"></img>
         <ShoppingCartButton />
       </div>
