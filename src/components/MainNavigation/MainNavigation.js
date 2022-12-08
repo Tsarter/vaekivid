@@ -6,7 +6,6 @@ import ShoppingCartButton from "../ShoppingCartOverlay/ShoppingCartButton";
 import SearchButtonComponent from "../SearchButtonComponent/SearchButtonComponent";
 import StoreButton from "../buttons/StoreButton/Storebutton";
 
-
 function MainNavigation() {
   return (
     <header className={classes.header}>
@@ -26,16 +25,27 @@ function MainNavigation() {
             <h4>Blogi</h4>
           </Link>
         </div>
-         <Link to="/">
-            <StoreButton />
-         </Link>
+        <div>
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                console.log("hey");
+                var access = document.getElementById("shop");
+                access.scrollIntoView({ behavior: "smooth" }, true);
+              }, 70);
+            }}
+            to="/"
+          >
+            <h4>Pood</h4>
+          </Link>
+        </div>
       </div>
       <div className={classes.logo}>
         <div className={classes.logo_text}>Väekivid</div>
         <img src={logo} alt="Väekivid logo"></img>
       </div>
       <div className={classes.icons}>
-        <SearchButtonComponent/>
+        <SearchButtonComponent />
         <img src={user} alt="kasutaja"></img>
         <ShoppingCartButton />
       </div>
