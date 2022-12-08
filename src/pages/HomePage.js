@@ -1,13 +1,10 @@
 import Card from "../components/CardStuff/Card";
-import kjall from "../assets/kjall.png";
 import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
-import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "../features/cart/cartSlice";
+import { useSelector } from "react-redux";
 function HomePage() {
-  const dispatch = useDispatch();
   const { storage } = useSelector((state) => state.storage);
   return (
     <div>
@@ -48,7 +45,6 @@ function HomePage() {
             );
           })}
         </div>
-        A<button onClick={() => dispatch(clearCart())}></button>
       </section>
     </div>
   );
