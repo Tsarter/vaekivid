@@ -11,30 +11,16 @@ import React from "react";
 
 function MainNavigation() {
   const [showSideMenu, setshowSideMenu] = React.useState(false);
-  const show = {
-    showSideMenu: showSideMenu,
-    setshowSideMenu: () => setshowSideMenu(!showSideMenu),
+  const show = () => {
+    setshowSideMenu(!showSideMenu);
   };
 
   return (
     <div>
-      {showSideMenu && (
-        <SideMenu
-          onClick={() => {
-            show.setshowSideMenu();
-          }}
-          showSideMenu={showSideMenu}
-        />
-      )}
+      {showSideMenu && <SideMenu onClick={show} showSideMenu={showSideMenu} />}
 
-      <header className={classes.header}>
-        <img
-          className={classes.hamburger}
-          src={hamburger}
-          onClick={() => {
-            show.setshowSideMenu();
-          }}
-        ></img>
+      <header className={classes.header} id="header">
+        <img className={classes.hamburger} src={hamburger} onClick={show}></img>
         <div className={classes.pages}>
           <div>
             <Link to="/">
