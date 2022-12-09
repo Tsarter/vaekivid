@@ -45,8 +45,12 @@ function MainNavigation() {
         <img src={logo} alt="Väekivid logo"></img>
       </div>
       <div className={classes.icons}>
-        <SearchButtonComponent />
-        <img src={user} alt="kasutaja"></img>
+        <div className={classes.hideOnMobile}>
+          <SearchButtonComponent />
+        </div>
+        <div className={classes.hideOnMobile}>
+          <img src={user} alt="kasutaja"></img>
+        </div>
         <ShoppingCartButton />
       </div>
     </header>
