@@ -19,7 +19,7 @@ export default function PersonalityTraitsComponent(props) {
           color="#CB19F8"
         />
         <PersonalityTraitsSliderComponent
-          title="Inteligentsus"
+          title="Intelligentsus"
           default={0}
           maxval={5}
           minval={-5}
@@ -111,13 +111,6 @@ export default function PersonalityTraitsComponent(props) {
         />
         <PersonalityTraitsSliderComponent
           title="Enesedistsipliin"
-          default={0}
-          maxval={5}
-          minval={-5}
-          color="#6CC2DD"
-        />
-        <PersonalityTraitsSliderComponent
-          title="Korrektsus"
           default={0}
           maxval={5}
           minval={-5}
