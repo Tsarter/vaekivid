@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
 import classes from "./sideMenu.module.css";
-let first_click = true;
 function SideMenu({ onClick, showSideMenu }) {
+  const handleClickOutside = function (event) {
+    if (!event.target.closest("#sidem") && !event.target.closest("#header")) {
+      console.log("hey", showSideMenu);
+      onClick();
+      document.removeEventListener("click", handleClickOutside);
+    }
+  };
   if (showSideMenu) {
-    document.addEventListener("click", function (event) {
-      if (!event.target.closest("#sidem") && !event.target.closest("#header")) {
-        console.log("hey", showSideMenu);
-        onClick();
-      }
-    });
-  } else {
-    first_click = false;
-    //document.removeEventListener("click");
+    document.addEventListener("click", handleClickOutside);
   }
 
   return (
