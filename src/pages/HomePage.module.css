@@ -55,11 +55,14 @@
     background-color: #D3E2E8;
 }
 
+.saaJouduSection h1 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 .saaJouduSection>h1:nth-child(1) {
     place-self: center;
     align-self: end;
-    font-weight: bold;
-    font-size: 3rem;
     grid-area: 1/2;
 }
 
@@ -69,18 +72,18 @@
 
 .saaJouduSection>h1:nth-child(2) {
     grid-area: 3/4;
-    font-size: 3rem;
 }
 
 .saaJouduSection button {
     grid-area: 6/2;
     place-self: center;
     align-self: end;
-    height: 6rem;
+    height: 5rem;
 }
 
 .shopSection {
     padding-top: 10rem;
+    padding-left: 2rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -115,5 +118,15 @@
     }
     .treeSection {
         grid-template: 1fr 1fr /1fr;
+    }
+    .saaJouduSection h1 {
+        font-size: 2rem;
+    }
+    .saaJouduSection button {
+        height: 3rem;
+        font-size: 2rem;
+    }
+    .saaJouduSection button i {
+        height: 1.5rem;
     }
 }
