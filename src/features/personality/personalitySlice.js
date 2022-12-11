@@ -1,21 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  Seiklushimu: { value: 0, color: "#CB19F8" },
-  Intelligentsus: { value: 0, color: "#E3EC80" },
-  Enesekindlus: { value: 0, color: "#EC84DB" },
-  Rõõmsameelsus: { value: 0, color: "#9F84EC" },
-  Koostöö: { value: 0, color: "#58BA2A" },
-  Depressioon: { value: 0, color: "#2A5BBA" },
-  Kohusetundlikkus: { value: 0, color: "#65686D" },
-  Emotsionaalsus: { value: 0, color: "#9D2ABA" },
-  Sõbralikkus: { value: 0, color: "#E35A2E" },
-  Seltskondlikkus: { value: 0, color: "#6CC2DD" },
-  Kujutlusvõime: { value: 0, color: "#6CC2DD" },
-  Liberaalus: { value: 0, color: "#6CC2DD" },
-  Tagasihoidlikkus: { value: 0, color: "#6CC2DD" },
-  Korrektsus: { value: 0, color: "#6CC2DD" },
-  Enesedistsipliin: { value: 0, color: "#6CC2DD" },
+  adventurousness: { name: "Seiklushimu", value: 0, color: "#CB19F8" },
+  intellect: { name: "Intelligentsus", value: 0, color: "#E3EC80" },
+  assertiveness: { name: "Enesekindlus", value: 0, color: "#EC84DB" },
+  cheerfulness: { name: "Rõõmsameelsus", value: 0, color: "#9F84EC" },
+  cooperation: { name: "Koostöö", value: 0, color: "#58BA2A" },
+  depression: { name: "Depressioon", value: 0, color: "#2A5BBA" },
+  dutifulness: { name: "Kohusetundlikkus", value: 0, color: "#65686D" },
+  emotionality: { name: "Emotsionaalsus", value: 0, color: "#9D2ABA" },
+  friendliness: { name: "Sõbralikkus", value: 0, color: "#E35A2E" },
+  gregariousness: { name: "Seltskondlikkus", value: 0, color: "#6CC2DD" },
+  imagination: { name: "Kujutlusvõime", value: 0, color: "#FAAB78" },
+  liberalism: { name: "Liberaalus", value: 0, color: "#e924b5" },
+  modesty: { name: "Tagasihoidlikkus", value: 0, color: "#7F669D" },
+  orderliness: { name: "Korrektsus", value: 0, color: "#FF8787" },
+  "self-discipline:": {
+    name: "Enesedistsipliin",
+    value: 0,
+    color: "#9363f1",
+  },
 };
 
 const personalitySlice = createSlice({
@@ -32,13 +36,15 @@ const personalitySlice = createSlice({
         state[payload].value--;
       }
     },
-    setValue: (state, { payload }) => {
-      state[payload.personality_type] = payload.personality_value;
+    setPersonalityValue: (state, { payload }) => {
+      console.log(state.adventurousness);
+      /* state[payload[0]].value = payload[1]; 
+      console.log(state[payload[0]]);*/
     },
   },
 });
 
-export const { increaseValue, decreaseValue, setValue } =
+export const { increaseValue, decreaseValue, setPersonalityValue } =
   personalitySlice.actions;
 
 export default personalitySlice.reducer;
