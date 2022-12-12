@@ -1,8 +1,7 @@
 .toplevelContainer {
     width: 90%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin-top: 3rem;
 }
 
 .leftContainer {
