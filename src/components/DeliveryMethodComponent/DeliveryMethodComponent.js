@@ -5,7 +5,6 @@ function DeliveryMethodComponent(props) {
         <h2>
             {props.title}
         </h2>
-        <hr/>
         <div className="CourierOptionContainer">
             {props.children}
         </div>
