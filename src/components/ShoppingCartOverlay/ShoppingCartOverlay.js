@@ -37,7 +37,7 @@ export default function ShoppingCartOverlay({ handleShown }) {
       <div className={classes.total}>Summa: {total}€</div>
       <div className={classes.navBtn}>
         <NavigationButton
-          className="buy_button"
+          color="#30CF53"
           link="/ostukorv"
           clickFunc={() => handleShown.setClick(false)}
         >
