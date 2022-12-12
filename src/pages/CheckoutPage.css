@@ -74,7 +74,9 @@
 
 .CheckoutShoppingCart {
     grid-area: 2/1;
-    place-self: center;
+    place-self: flex-start center;
+    overflow: auto;
+    max-width: 100%;
 }
 
 @media screen and (max-width:1300px) {
