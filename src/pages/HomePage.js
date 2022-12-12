@@ -1,13 +1,10 @@
-import Card from "../components/CardStuff/Card";
-import kjall from "../assets/kjall.png";
+import Card from "../components/Cards/Card";
 import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
-import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "../features/cart/cartSlice";
+import { useSelector } from "react-redux";
 function HomePage() {
-  const dispatch = useDispatch();
   const { storage } = useSelector((state) => state.storage);
   return (
     <div>
@@ -32,8 +29,13 @@ function HomePage() {
         <ButtonContinue destination="/isikuomadused" />
       </section>
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
+<<<<<<< HEAD
       <section className={classes.shopSection}>
         <h1 className="vali-spetsialistide-kivi">Või vali mõni spetsialistide poolt loodud väekivi</h1>
+=======
+      <section id="shop" className={classes.shopSection}>
+        <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
+>>>>>>> 02bf043a4ee7c7bc4f50e43c157b8ea8ecb66613
         <div className={classes.card_table}>
           {storage.map((item) => {
             return (
@@ -48,7 +50,6 @@ function HomePage() {
             );
           })}
         </div>
-        <button onClick={() => dispatch(clearCart())}></button>
       </section>
     </div>
   );

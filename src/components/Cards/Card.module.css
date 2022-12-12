@@ -1,11 +1,9 @@
 .price_text {
-
-    font-size: 1em;
-    margin-top: 0.2em;
+    font-size: 1.1em;
 }
 
 .name_text {
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 
 .btn {
@@ -24,9 +22,13 @@
     background-color: rgb(241, 241, 241);
     border-radius: 0.6em;
     margin: 1em;
+<<<<<<< HEAD:src/components/CardStuff/Card.module.css
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     width: 220px;
 
+=======
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+>>>>>>> 02bf043a4ee7c7bc4f50e43c157b8ea8ecb66613:src/components/Cards/Card.module.css
 }
 
 .rock_image {

@@ -1,22 +1,97 @@
 .toplevelContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .leftContainer {
-    width: 50%;
+    flex: 0 0 45%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    grid-area: 2/3;
 }
 
 .rightContainer {
-    width: 50%;
+    flex: 0 0 45%;
+    max-height: 100%;
+    font-size: 1.4em;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    place-self: center;
+}
+
+.shoppingCartTitle {
+    min-height: 0;
+    flex: 0 1 10%;
+    margin: 0;
+}
+
+.shoppingCartContainer {
+    width: 100%;
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
+}
+
+.payButton {
+    background: hsl(60, 17%, 65%);
+    border: none;
+    padding: 0.5em 1em;
+    font-family: "Rubik", serif;
+    font-size: 1em;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.76);
+    border-radius: 8px;
+    grid-area: 4/1;
+    width: fit-content;
+    place-self: center;
+}
+
+.payButton:hover {
+    cursor: pointer;
+    background: hsl(60, 17%, 60%);
+}
+
+.payButton:active {
+    cursor: pointer;
+    background: hsl(60, 17%, 55%);
+}
+
+.totalLabel {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    grid-area: 3/1;
+    place-self: center;
+}
+
+.shoppingCartTitle {
+    grid-area: 1/1/1/1;
+    place-self: center;
+}
+
+.CheckoutShoppingCart {
+    grid-area: 2/1;
+    place-self: flex-start center;
+    overflow: auto;
+    max-width: max(100%, 400px);
+}
+
+@media screen and (max-width:1300px) {
+    .leftContainer {
+        grid-area: 3/1;
+    }
+    .payButton {
+        grid-area: 5/1;
+        place-self: center;
+    }
+    .totalLabel {
+        grid-area: 4/1;
+        place-self: center;
+    }
+    .shoppingCartTitle {
+        place-self: center;
+    }
 }

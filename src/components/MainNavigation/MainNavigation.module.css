@@ -5,9 +5,16 @@
     justify-content: center;
     background-color: #F2F2F2;
     color: #212429;
-    z-index: 1;
-    margin-top: 0.8em;
+    z-index: 99999;
+    padding-top: 0.8rem;
     padding-bottom: 1rem;
+    position: fixed;
+}
+
+.sticky {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
 }
 
 h4 {
@@ -32,7 +39,6 @@ nav {
     justify-content: center;
     align-items: center;
     padding-left: 1rem;
-
 }
 
 .logo_text {
@@ -64,4 +70,26 @@ nav {
     height: max(1.5rem, 1.8vw);
     margin-left: 0.3em;
     margin-right: 0.3em;
+}
+
+.hamburger {
+    display: none;
+    height: 2rem;
+    flex: .5;
+}
+
+@media only screen and (max-width: 600px) {
+    .pages {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        ;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .hideOnMobile {
+        display: none;
+    }
 }
