@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const initialState = {
   adventurousness: { name: "Seiklushimu", value: 0, color: "#CB19F8" },
@@ -23,7 +23,7 @@ const initialState = {
 };
 
 const personalitySlice = createSlice({
-  name: "cart",
+  name: "personality",
   initialState,
   reducers: {
     increaseValue: (state, { payload }) => {
@@ -37,9 +37,12 @@ const personalitySlice = createSlice({
       }
     },
     setPersonalityValue: (state, { payload }) => {
-      console.log(state.adventurousness);
-      /* state[payload[0]].value = payload[1]; 
-      console.log(state[payload[0]]);*/
+      if (payload[0] in state) {
+        console.log(payload[0]);
+        state[payload[0]].value = Math.round(payload[1] * 5 + Number.EPSILON);
+      }
+      //
+      //console.log(state[payload[0]]);*/
     },
   },
 });

@@ -35,7 +35,12 @@ function PersonalityResultsPage() {
   }
   return (
     <div>
-      <p>{text}</p>{" "}
+      <p>{text}</p>
+      <PersonalityTraitsComponent
+        title="Sinu isikuomadused"
+        color=""
+        noChoosing="True"
+      />
     </div>
   );
 }

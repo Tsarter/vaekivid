@@ -22,6 +22,7 @@ export default function PersonalityTraitsComponent(props) {
               maxval={5}
               minval={-5}
               color={personality[key].color}
+              noChoosing={props.noChoosing}
             />
           );
         })}
