@@ -18,7 +18,7 @@ function Card(props) {
         ></img>
       </div>
       <h2 className={classes.name_text}>{props.name}</h2>
-      <h2 className={classes.price_text}>{props.price}</h2>
+      <h2 className={classes.price_text}>{props.price}€ / tk</h2>
       <div className={classes.actions}>
         {props.checkout != "True" && (
           <button
