@@ -33,7 +33,7 @@ function HomePage() {
       </section>
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
       <section className={classes.shopSection}>
-        <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
+        <h1 className="vali-spetsialistide-kivi">Või vali mõni spetsialistide poolt loodud väekivi</h1>
         <div className={classes.card_table}>
           {storage.map((item) => {
             return (
