@@ -1,7 +1,7 @@
 .card_table {
     display: flex;
     flex-direction: row;
-    flex-grow: 2;
+    flex-grow: 1;
     flex-wrap: wrap;
     justify-content: flex-start;
     z-index: 1;
@@ -79,7 +79,6 @@
     grid-area: 6/2;
     place-self: center;
     align-self: end;
-<<<<<<< HEAD
     height: 6rem;
     padding-left: 1em;
     padding-right: 1em;
@@ -95,14 +94,6 @@
     margin-bottom: 10em;
     margin-left: 9%;
     margin-right: 9%;
-=======
-    height: 5rem;
-}
-
-.shopSection {
-    padding-top: 6rem;
-    padding-left: 2rem;
->>>>>>> 02bf043a4ee7c7bc4f50e43c157b8ea8ecb66613
 }
 
 @media screen and (max-width: 1000px) {

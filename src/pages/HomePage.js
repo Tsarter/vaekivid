@@ -29,13 +29,8 @@ function HomePage() {
         <ButtonContinue destination="/isikuomadused" />
       </section>
       <div className={[classes.wave2, classes.spacer].join(" ")}></div>
-<<<<<<< HEAD
-      <section className={classes.shopSection}>
-        <h1 className="vali-spetsialistide-kivi">Või vali mõni spetsialistide poolt loodud väekivi</h1>
-=======
       <section id="shop" className={classes.shopSection}>
         <h1>Või vali mõni spetsialistide poolt loodud väekivi</h1>
->>>>>>> 02bf043a4ee7c7bc4f50e43c157b8ea8ecb66613
         <div className={classes.card_table}>
           {storage.map((item) => {
             return (
