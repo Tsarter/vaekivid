@@ -1,0 +1,54 @@
+.PersonalityTraitsPage {
+    display: grid;
+    background-color: #D1D1C0;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 5vw 80px auto auto 5vw;
+    grid-template-rows: 10rem .5fr .8fr 1fr 1fr 80px;
+}
+
+.PersonalityTraitsComponent {
+    grid-area: 3/3/6/3;
+}
+
+.PersonalityTraitsPage h1:nth-child(2) {
+    grid-area: 2/2/2/4;
+}
+
+.testSectionDesktop {
+    display: grid;
+    row-gap: 1rem;
+    grid-area: 3/4;
+    place-self: flex-end flex-start;
+}
+
+.btnToTest button:hover {
+    margin-bottom: 0;
+}
+
+.testSectionMobile {
+    display: none;
+}
+
+.testSectionMobile h1:nth-child(3) {
+    padding-left: 70%;
+}
+
+@media screen and (max-width: 900px) {
+    .testSectionMobile {
+        grid-area: 2/2/2/4;
+        display: grid;
+        place-self: center;
+        row-gap: 1rem;
+    }
+    .PersonalityTraitsComponent {
+        grid-area: 3/2/6/4;
+    }
+    .testSectionDesktop {
+        display: none;
+    }
+    .PersonalityTraitsPage h1:nth-child(2) {
+        place-self: flex-end;
+        grid-area: 1/2/2/4;
+    }
+}

@@ -2,10 +2,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "../features/cart/cartSlice";
 import storageSlice from "../features/storage/storageSlice";
+import personalitySlice from "../features/personality/personalitySlice";
+import personalRocksSlice from "../features/personalRocks/personalRocksSlice";
 
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
     storage: storageSlice,
+    personality: personalitySlice,
+    personalRocks: personalRocksSlice,
   },
 });

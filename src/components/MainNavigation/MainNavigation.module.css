@@ -11,6 +11,12 @@
     position: fixed;
 }
 
+.sticky {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
 h4 {
     font-size: max(1rem, 1.1vw);
     font-weight: 400;
