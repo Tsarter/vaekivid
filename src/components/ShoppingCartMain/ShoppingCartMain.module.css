@@ -1,0 +1,16 @@
+
+.ShoppingCartMain {
+    width: 100%;
+    height: 100%;
+}
+
+.CardContent {
+    height: 90%;
+}
+
+.total {
+    display: flex;
+    word-spacing: 5px;
+    background: red;
+    height: 10%;
+}

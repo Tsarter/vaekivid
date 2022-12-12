@@ -1,11 +1,12 @@
 import "./CheckoutPage.css";
 import CheckoutContainer from "../components/CheckoutComponent/CheckoutContainer.js";
-import { useSelector } from "react-redux";
+import {useSelector} from "react-redux";
 import axios from "axios";
+import ShoppingCartMain from "../components/ShoppingCartMain/ShoppingCartMain";
 
 function CheckoutPage() {
   //redux magic. very good explanation -> https://www.youtube.com/watch?v=bbkBuqC1rU4
-  const { amount, cartItems, total } = useSelector((store) => store.cart);
+  const {amount, cartItems, total} = useSelector((store) => store.cart);
   const jsonToSend = {};
   const options = {
     method: "POST",
@@ -46,12 +47,24 @@ function CheckoutPage() {
   };
   return (
     <div className="toplevelContainer">
-      <div className="leftContainer"></div>
-      <div className="rightContainer">
-        <CheckoutContainer />
+      <div className="innerContainer">
+          <div className="rightContainer">
+            <h1 className="shoppingCartTitle">Sinu ostukorv</h1>
+            <div className="shoppingCartMainContainer">
+              <ShoppingCartMain>
+
+
+              </ShoppingCartMain>
+            </div>
+            <button className="payButton" onClick={paymentHandler}>Maksma</button>
+          </div>
+          <div className="leftContainer">
+            <CheckoutContainer/>
+          </div>
       </div>
-      <button onClick={paymentHandler}>Maksma</button>
+
     </div>
   );
 }
+
 export default CheckoutPage;
