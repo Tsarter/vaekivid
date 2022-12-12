@@ -38,7 +38,6 @@ const personalitySlice = createSlice({
     },
     setPersonalityValue: (state, { payload }) => {
       if (payload[0] in state) {
-        console.log(payload[0]);
         state[payload[0]].value = Math.round(payload[1] * 5 + Number.EPSILON);
       }
       //

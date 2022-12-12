@@ -1,4 +1,4 @@
-import Card from "../components/CardStuff/Card";
+import Card from "../components/Cards/Card";
 import classes from "./HomePage.module.css";
 import trees from "../assets/Kuusepuud.svg";
 import flag from "../assets/LippKunkaOtsas.svg";

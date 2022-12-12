@@ -16,7 +16,7 @@ function MainNavigation() {
   };
 
   return (
-    <div>
+    <div className={classes.sticky}>
       {showSideMenu && <SideMenu onClick={show} showSideMenu={showSideMenu} />}
 
       <header className={classes.header} id="header">

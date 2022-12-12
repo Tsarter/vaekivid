@@ -1,6 +1,3 @@
-import { useState } from "react";
-import Modal from "./Modal";
-import Backdrop from "./Backdrop";
 import classes from "./Card.module.css";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../features/cart/cartSlice";
