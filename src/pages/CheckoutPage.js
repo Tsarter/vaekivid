@@ -3,7 +3,7 @@ import CheckoutContainer from "../components/CheckoutComponent/CheckoutContainer
 import { useSelector } from "react-redux";
 import axios from "axios";
 import ShoppingCartMain from "../components/ShoppingCartMain/ShoppingCartMain";
-import ShoppingCartCard from "../components/ShoppingCartCard/ShoppingCartCard";
+import Card from "../components/CardStuff/Card";
 import bolmen from "../assets/bolmen.png";
 
 function CheckoutPage() {
@@ -52,23 +52,24 @@ function CheckoutPage() {
       <h1 className="shoppingCartTitle">Sinu ostukorv</h1>
       <div className="CheckoutShoppingCart">
         <ShoppingCartMain>
-          <ShoppingCartCard
-            src={bolmen}
-            alt="bolmen"
-            title="Rok01"
-            price="5.99"
-          ></ShoppingCartCard>
-          <ShoppingCartCard
-            src={bolmen}
-            alt="bolmen"
-            title="New d d d d d d d f f f f f f f f f f f f f f f f f f "
-            price="5.99"
-          ></ShoppingCartCard>
+          {cartItems.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                id={item.id}
+                name={item.fields.title}
+                price={item.fields.price}
+                image={item.fields.image[0].url}
+                item={item}
+                checkout="True"
+              />
+            );
+          })}
         </ShoppingCartMain>
       </div>
 
       <div className="totalLabel">
-        <b>Kokku: </b> 50.99€
+        <b>Kokku: </b> {total}€
       </div>
       <button className="payButton" onClick={paymentHandler}>
         Maksma
