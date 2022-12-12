@@ -1,17 +1,16 @@
-@import "../../index.css";
-.container {
-    font-size: clamp(10px, 1.5vw, 14px);
-    background: #D9D9D9;
-    padding: 1.6rem 2rem;
-    border-radius: 22px;
-    box-shadow: 0 3px 3px 0 #4f4f4f;
-    width: fit-content;
-    height: fit-content;
-    font-family: "Rubik", serif;
+.toplevelContainer {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-.containerTitle {
-    margin: 0;
+.leftContainer {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: 2/3;
 }
 
 .rightContainer {
@@ -48,6 +47,7 @@
     border-radius: 8px;
     grid-area: 4/1;
     width: fit-content;
+    place-self: center;
 }
 
 .payButton:hover {
@@ -64,14 +64,17 @@
     margin-top: 2rem;
     font-size: 1.5rem;
     grid-area: 3/1;
+    place-self: center;
 }
 
 .shoppingCartTitle {
     grid-area: 1/1/1/1;
+    place-self: center;
 }
 
 .CheckoutShoppingCart {
     grid-area: 2/1;
+    place-self: center;
 }
 
 @media screen and (max-width:1300px) {
