@@ -31,11 +31,12 @@
 }
 
 .buttonContainer {
-    width: 100%;
+    width: 50%;
+    margin: auto;
 }
 
 .text {
-    margin: 30px auto;
+    margin: 2em auto;
     justify-content: center;
     font-family: 'Rubik', serif;
     font-style: normal;

@@ -20,7 +20,7 @@ function MainNavigation() {
       {showSideMenu && <SideMenu onClick={show} showSideMenu={showSideMenu} />}
 
       <header className={classes.header} id="header">
-        <img className={classes.hamburger} src={hamburger} onClick={show}></img>
+        <img className={classes.hamburger} src={hamburger} onClick={show} alt="menüü"></img>
         <div className={classes.pages}>
           <div>
             <Link to="/">
@@ -37,20 +37,9 @@ function MainNavigation() {
               <h4>Blogi</h4>
             </Link>
           </div>
-          <div>
-            <Link
-              onClick={() => {
-                setTimeout(() => {
-                  console.log("hey");
-                  var access = document.getElementById("shop");
-                  access.scrollIntoView({ behavior: "smooth" }, true);
-                }, 70);
-              }}
-              to="/"
-            >
-              <h4>Pood</h4>
-            </Link>
-          </div>
+          <Link to="/">
+            <StoreButton />
+          </Link>
         </div>
         <div className={classes.logo}>
           <div className={classes.logo_text}>Väekivid</div>

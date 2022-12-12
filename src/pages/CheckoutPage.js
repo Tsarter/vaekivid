@@ -2,6 +2,9 @@ import "./CheckoutPage.css";
 import CheckoutContainer from "../components/CheckoutComponent/CheckoutContainer.js";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import ShoppingCartMain from "../components/ShoppingCartMain/ShoppingCartMain";
+import ShoppingCartCard from "../components/ShoppingCartCard/ShoppingCartCard";
+import bolmen from "../assets/bolmen.png";
 
 function CheckoutPage() {
   //redux magic. very good explanation -> https://www.youtube.com/watch?v=bbkBuqC1rU4
@@ -46,12 +49,36 @@ function CheckoutPage() {
   };
   return (
     <div className="toplevelContainer">
-      <div className="leftContainer"></div>
-      <div className="rightContainer">
+      <h1 className="shoppingCartTitle">Sinu ostukorv</h1>
+      <div className="CheckoutShoppingCart">
+        <ShoppingCartMain>
+          <ShoppingCartCard
+            src={bolmen}
+            alt="bolmen"
+            title="Rok01"
+            price="5.99"
+          ></ShoppingCartCard>
+          <ShoppingCartCard
+            src={bolmen}
+            alt="bolmen"
+            title="New d d d d d d d f f f f f f f f f f f f f f f f f f "
+            price="5.99"
+          ></ShoppingCartCard>
+        </ShoppingCartMain>
+      </div>
+
+      <div className="totalLabel">
+        <b>Kokku: </b> 50.99€
+      </div>
+      <button className="payButton" onClick={paymentHandler}>
+        Maksma
+      </button>
+
+      <div className="leftContainer">
         <CheckoutContainer />
       </div>
-      <button onClick={paymentHandler}>Maksma</button>
     </div>
   );
 }
+
 export default CheckoutPage;
