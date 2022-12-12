@@ -25,7 +25,7 @@ function CheckoutPage() {
       currency: "EUR",
       access_key: "4e5d2fcd-c766-47c4-aa74-6197cf7ddb5e",
       merchant_reference: toString(randomId),
-      merchant_return_url: "https://tatall.pages.taltech.ee/iti0105-2022/",
+      merchant_return_url: "https://tatall.pages.taltech.ee/iti0105-2022/#/aitah",
       merchant_notification_url: "https://montonio.com/orders/payment_webhook",
       payment_information_unstructured:
         "Payment for order " + toString(randomId),

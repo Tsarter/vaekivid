@@ -8,6 +8,7 @@ import PersonalityTraitsPage from "./pages/PersonalityTraitsPage";
 import PersonalityTestPage from "./pages/personalityTestPage";
 import ScrollToTop from "./components/ScrollToTop";
 import PersonalityResultsPage from "./pages/PersonalityTestResultsPage";
+import ThankYouPage from "./pages/ThankYouPage";
 
 import { getStorageItems } from "./features/storage/storageSlice";
 import { useSelector, useDispatch } from "react-redux";
@@ -37,6 +38,7 @@ function App() {
         <Route path="/iseloomutest" element={<PersonalityTestPage />} />
         <Route path="/isikuomadused" element={<PersonalityTraitsPage />} />
         <Route path="/iseloomutulemused" element={<PersonalityResultsPage />} />
+        <Route path="/aitah" element={<ThankYouPage />} />
       </Routes>
     </Layout>
   );
