@@ -1,0 +1,17 @@
+.TopLevelContainer {
+    margin: 4rem auto 4rem auto;
+    text-align: center;
+    max-width: 60%;
+}
+
+.Confirmed {
+    margin-bottom: 1.5rem;
+}
+
+.Receipt {
+    margin-bottom: 2rem;
+}
+
+.ThankYou {
+    line-height: 1.6rem;
+}
