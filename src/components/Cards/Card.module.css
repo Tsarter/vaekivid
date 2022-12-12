@@ -22,11 +22,13 @@
     background-color: rgb(241, 241, 241);
     border-radius: 0.6em;
     margin: 1em;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 220px;
+
 }
 
 .rock_image {
-    width: 2.5em;
+    width: 2em;
     height: 2em;
 }
 
@@ -42,7 +44,8 @@
 }
 
 .rock_image {
-    width: 14em;
-    height: 10em;
+    aspect-ratio: 10/7;
+    width: 10em;
+    height: 7em;
     margin-bottom: 1em;
 }
