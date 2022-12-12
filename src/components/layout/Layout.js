@@ -5,7 +5,9 @@ import FooterComponent from "../FooterComponent/FooterComponent";
 function Layout(props) {
   return (
     <div className={classes.layout}>
-      <MainNavigation />
+       <div className={classes.nav}>
+         <MainNavigation />
+       </div>
       <main className={classes.main}>{props.children}</main>
       <FooterComponent />
     </div>

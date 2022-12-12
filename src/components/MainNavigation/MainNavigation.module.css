@@ -5,9 +5,12 @@
     justify-content: center;
     background-color: #F2F2F2;
     color: #212429;
-    z-index: 1;
-    margin-top: 0.8em;
+    padding-top: 0.8rem;
     padding-bottom: 1rem;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
 }
 
 h4 {

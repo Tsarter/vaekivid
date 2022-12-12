@@ -8,3 +8,7 @@
 .main {
     flex: 1;
 }
+
+.nav{
+    margin-bottom: 4rem;
+}

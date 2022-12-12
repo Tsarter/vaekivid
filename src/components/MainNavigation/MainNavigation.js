@@ -5,7 +5,9 @@ import user from "../../assets/User.svg";
 import ShoppingCartButton from "../ShoppingCartOverlay/ShoppingCartButton";
 import SearchButtonComponent from "../SearchButtonComponent/SearchButtonComponent";
 
+
 function MainNavigation() {
+
   return (
     <header className={classes.header}>
       <div className={classes.pages}>
