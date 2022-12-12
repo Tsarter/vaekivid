@@ -7,10 +7,14 @@ export default function ShoppingCartCard(props) {
       <div className={classes.CardImg}>
         <img src={props.src} alt={props.alt}/>
       </div>
-      <div className={classes.CardInfo}>
-        {props.title}<br/>
-        {props.price}€
+      <div className={classes.InfoContainer}>
+        <div className={classes.CardInfo}>
+          <div>{props.title}</div>
+          <div>{props.price}€</div>
+        </div>
+        <button className={classes.removeButton}>Eemalda</button>
       </div>
+
     </div>
   );
 

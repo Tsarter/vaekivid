@@ -1,27 +1,60 @@
 
 
 .ShoppingCartCard {
+    width: 250px;
     flex: 0 0 250px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     padding: 0.5em;
-    aspect-ratio: 5/6;
+    aspect-ratio: 5/9;
     margin: 10px 0;
 }
 
 .CardImg {
+    background: #D8AA78;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    border-radius: 8px;
+    width: inherit;
     flex: 0.8 0 0;
 }
 
 .CardImg > img {
-    width: 200px;
+    width: 85%;
 }
 
 .CardInfo {
-    flex: 0.2 0 0;
+    margin: 10px 0;
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+.CardInfo > * {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.InfoContainer {
+    display: flex;
+}
+
+
+.removeButton {
+    float: right;
+    color: gray;
+    font-family: "Rubik", serif;
+    background: none;
+    text-decoration: underline;
+    border: none;
+    font-size: 0.8em;
+    margin: 0 10px;
+}
+
+.removeButton:hover{
+    color: #5e5e5e;
+    cursor: pointer;
 }

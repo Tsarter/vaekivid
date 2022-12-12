@@ -55,13 +55,8 @@ function CheckoutPage() {
             <h1 className="shoppingCartTitle">Sinu ostukorv</h1>
             <div className="shoppingCartContainer">
               <ShoppingCartMain>
-                <ShoppingCartCard src={bolmen} title="Rock01" price="5.99"></ShoppingCartCard>
-                <ShoppingCartCard title="Rock02" price="199.99"></ShoppingCartCard>
-                <ShoppingCartCard src={bolmen} title="Rock03" price="10.99"></ShoppingCartCard>
-                <ShoppingCartCard src={bolmen} title="Rock01" price="5.99"></ShoppingCartCard>
-                <ShoppingCartCard title="Rock02" price="199.99"></ShoppingCartCard>
-                <ShoppingCartCard src={bolmen} title="Rock03" price="10.99"></ShoppingCartCard>
-
+                <ShoppingCartCard src={bolmen} alt="bolmen" title="Rok01" price="5.99"></ShoppingCartCard>
+                <ShoppingCartCard src={bolmen} alt="bolmen" title="New d d d d d d d f f f f f f f f f f f f f f f f f f " price="5.99"></ShoppingCartCard>
               </ShoppingCartMain>
             </div>
             <button className="payButton" onClick={paymentHandler}>Maksma</button>
