@@ -3,7 +3,7 @@ import CheckoutContainer from "../components/CheckoutComponent/CheckoutContainer
 import { useSelector } from "react-redux";
 import axios from "axios";
 import ShoppingCartMain from "../components/ShoppingCartMain/ShoppingCartMain";
-import Card from "../components/CardStuff/Card";
+import Card from "../components/Cards/Card";
 import bolmen from "../assets/bolmen.png";
 
 function CheckoutPage() {
