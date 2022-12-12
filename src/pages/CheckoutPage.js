@@ -19,19 +19,20 @@ function CheckoutPage() {
     body: JSON.stringify(jsonToSend),
   };
   const paymentHandler = () => {
-    let randomId = Math.floor(Math.random() * 10000000);
+    const randomId = Math.floor(Math.random() * 10000000).toString();
     let payloadObj = {
       amount: total,
       currency: "EUR",
       access_key: "4e5d2fcd-c766-47c4-aa74-6197cf7ddb5e",
-      merchant_reference: toString(randomId),
-      merchant_return_url: "https://tatall.pages.taltech.ee/iti0105-2022/#/aitah",
+      merchant_reference: randomId,
+      merchant_return_url:
+        "https://tatall.pages.taltech.ee/iti0105-2022/#/aitah",
       merchant_notification_url: "https://montonio.com/orders/payment_webhook",
-      payment_information_unstructured:
-        "Payment for order " + toString(randomId),
+      payment_information_unstructured: "Payment for order " + randomId,
       preselected_locale: "et",
-      checkout_email: toString(total) + "@montonio.com",
+      checkout_email: randomId + "@montonio.com",
     };
+    console.log(payloadObj, randomId);
     axios
       .post(
         "https://hook.eu1.make.com/j191rhrr099wkqk43jkxom9r3hut8myt",
