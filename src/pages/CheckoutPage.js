@@ -3,6 +3,9 @@ import CheckoutContainer from "../components/CheckoutComponent/CheckoutContainer
 import {useSelector} from "react-redux";
 import axios from "axios";
 import ShoppingCartMain from "../components/ShoppingCartMain/ShoppingCartMain";
+import ShoppingCartCard from "../components/ShoppingCartCard/ShoppingCartCard";
+import bolmen from "../assets/bolmen.png";
+
 
 function CheckoutPage() {
   //redux magic. very good explanation -> https://www.youtube.com/watch?v=bbkBuqC1rU4
@@ -50,9 +53,14 @@ function CheckoutPage() {
       <div className="innerContainer">
           <div className="rightContainer">
             <h1 className="shoppingCartTitle">Sinu ostukorv</h1>
-            <div className="shoppingCartMainContainer">
+            <div className="shoppingCartContainer">
               <ShoppingCartMain>
-
+                <ShoppingCartCard src={bolmen} title="Rock01" price="5.99"></ShoppingCartCard>
+                <ShoppingCartCard title="Rock02" price="199.99"></ShoppingCartCard>
+                <ShoppingCartCard src={bolmen} title="Rock03" price="10.99"></ShoppingCartCard>
+                <ShoppingCartCard src={bolmen} title="Rock01" price="5.99"></ShoppingCartCard>
+                <ShoppingCartCard title="Rock02" price="199.99"></ShoppingCartCard>
+                <ShoppingCartCard src={bolmen} title="Rock03" price="10.99"></ShoppingCartCard>
 
               </ShoppingCartMain>
             </div>
@@ -62,7 +70,6 @@ function CheckoutPage() {
             <CheckoutContainer/>
           </div>
       </div>
-
     </div>
   );
 }

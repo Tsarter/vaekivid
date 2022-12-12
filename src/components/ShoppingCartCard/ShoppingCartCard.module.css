@@ -1,0 +1,27 @@
+
+
+.ShoppingCartCard {
+    flex: 0 0 250px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    aspect-ratio: 5/6;
+    margin: 10px 0;
+}
+
+.CardImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 0.8 0 0;
+}
+
+.CardImg > img {
+    width: 200px;
+}
+
+.CardInfo {
+    flex: 0.2 0 0;
+}
