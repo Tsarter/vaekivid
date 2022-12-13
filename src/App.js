@@ -9,11 +9,13 @@ import PersonalityTestPage from "./pages/personalityTestPage";
 import ScrollToTop from "./components/ScrollToTop";
 import PersonalityResultsPage from "./pages/PersonalityTestResultsPage";
 import ThankYouPage from "./pages/ThankYouPage";
+import TermsPage from "./pages/TermsPage";
 
 import { getStorageItems } from "./features/storage/storageSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { calculateTotals } from "./features/cart/cartSlice";
+
 function App() {
   const { isLoading } = useSelector((store) => store.storage);
   const { cartItems } = useSelector((store) => store.cart);
@@ -39,6 +41,7 @@ function App() {
         <Route path="/isikuomadused" element={<PersonalityTraitsPage />} />
         <Route path="/iseloomutulemused" element={<PersonalityResultsPage />} />
         <Route path="/aitah" element={<ThankYouPage />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
     </Layout>
   );

@@ -1,0 +1,30 @@
+@import "../index.css";
+
+.bigContainer {
+    margin-left: 6vw;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+}
+
+.tnc {
+    margin-bottom: 3em;
+}
+
+.smallContainer {
+    margin: 15vh 8vw;
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    font-family: "Rubik", serif;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+p {
+    font-family: "Rubik", serif;
+    font-weight: 500;
+    font-size: 1.15em;
+    line-height: 1.8em;
+}

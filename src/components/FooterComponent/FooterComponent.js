@@ -1,5 +1,7 @@
 import logo from "../../assets/logo.svg";
 import "./FooterComponent.css";
+import { Link } from "react-router-dom";
+import React from "react";
 
 function FooterComponent() {
   return (
@@ -13,8 +15,10 @@ function FooterComponent() {
       </div>
       <div className="buttonContainer rowFlex">
         <div className="text">LANGUAGES</div>
+        <Link to="/terms">
+          <div className="text">LEGAL TERMS</div>
+        </Link>
         <div className="text">PRIVACY POLICY</div>
-        <div className="text">LEGAL TERMS</div>
       </div>
       <div className="rowFlex">
         <div className="text">© 2022 | VÄEKIVID</div>
