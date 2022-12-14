@@ -1,11 +1,12 @@
 @import "../../index.css";
-
 .DeliveryInfoComponent {
     margin: 10px 10px 10px 0;
     position: relative;
     top: 0;
     left: 0;
     font-family: "Rubik";
+    display: flex;
+    flex-direction: column;
 }
 
 .offset {
@@ -22,8 +23,9 @@
     border: none;
     padding: 0 5px;
     width: 100%;
+    max-width: 190px;
 }
 
-.inputBox:focus{
+.inputBox:focus {
     outline: 1px solid rgb(7, 190, 1);
 }
