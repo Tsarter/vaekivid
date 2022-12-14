@@ -39,8 +39,7 @@ const cartSlice = createSlice({
         total += item.fields.price;
       });
       state.amount = amount;
-      state.total = Math.round(total * 1000 + Number.EPSILON) / 1000;
-      state.total += state.delivery_price;
+      state.total = Math.round((total + state.delivery_price) * 1000 + Number.EPSILON) / 1000;
     },
   },
 });
