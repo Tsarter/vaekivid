@@ -19,7 +19,7 @@ export default function ShoppingCartOverlay({ handleShown }) {
         <h2>Sinu ostukorv</h2>
         <div className={classes.underLine} />
       </div>
-      <div>
+      <div className={classes.items}>
         {cartItems.map((item) => {
           return (
             <ShoppingCartItem

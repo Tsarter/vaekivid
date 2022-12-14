@@ -36,3 +36,8 @@
 .navBtn {
     font-size: 1.1em;
 }
+
+.items {
+    max-height: 15rem;
+    overflow-y: auto;
+}
