@@ -1,12 +1,11 @@
 .btn {
     border: none;
-    color: black;
     font: inherit;
-    font-size: 1em;
-    background-color: lightgrey;
     border-radius: 4px;
     transition-duration: 0s;
-    padding: 0.5em 0.5em;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
 }
 
 .btn:hover {

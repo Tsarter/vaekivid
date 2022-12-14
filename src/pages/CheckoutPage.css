@@ -37,13 +37,18 @@
     min-width: 0;
 }
 
+
 .payButton {
-    background: hsl(60, 17%, 65%);
     border: none;
-    padding: 0.5em 1em;
+    background-color: rgb(48, 207, 83);
+    font: inherit;
+    transition-duration: 0s;
+    color: white;
+    font-size: 1.5em;
+    padding: 0.7em 1.2em;
+    border: none;
     font-family: "Rubik", serif;
-    font-size: 1em;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.76);
+    font-size: 1.5em;
     border-radius: 8px;
     grid-area: 4/1;
     width: fit-content;
@@ -52,16 +57,17 @@
 
 .payButton:hover {
     cursor: pointer;
-    background: hsl(60, 17%, 60%);
+    background-color: rgb(68, 240, 105);
 }
 
 .payButton:active {
     cursor: pointer;
-    background: hsl(60, 17%, 55%);
+    background-color: rgb(38, 170, 66);
 }
 
 .totalLabel {
     margin-top: 2rem;
+    margin-bottom: 1em;
     font-size: 1.5rem;
     grid-area: 3/1;
     place-self: center;
