@@ -1,11 +1,15 @@
 @import "../index.css";
 .bigContainer {
-margin: 6em auto 1em 10em;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .smallContainer {
-    max-width: 65%;
-    margin-bottom: 4em;
+    width: 70%;
+    max-width: 60rem;
+    margin-bottom: 3rem;
 }
 
 h1 {
