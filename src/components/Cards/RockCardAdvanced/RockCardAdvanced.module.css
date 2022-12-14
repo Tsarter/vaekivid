@@ -58,3 +58,28 @@ h2.price_text {
     transform: rotate(40deg);
     border-radius: 1rem;
 }
+
+.rockPersonality:nth-child(1){
+    top: 1rem
+}
+.rockPersonality:nth-child(2){
+    top: 2rem
+}
+.rockPersonality:nth-child(3){
+    top: 3rem
+}  
+@media screen and (min-width: 600px) {
+    .rockPersonality:nth-child(1){
+        top: 1rem
+    }
+    .rockPersonality:nth-child(2){
+        top: 2.5rem
+    }
+    .rockPersonality:nth-child(3){
+        top: 4rem
+    }
+    .rockPersonality {
+        width: 2rem;
+        height: .7rem;
+    }
+}

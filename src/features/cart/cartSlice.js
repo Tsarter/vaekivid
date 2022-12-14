@@ -6,6 +6,7 @@ const initialState = {
   amount: 0,
   total: 0,
   delivery_price: 0,
+  email: "Email"
 };
 
 const cartSlice = createSlice({
@@ -20,6 +21,9 @@ const cartSlice = createSlice({
     },
     addItem: (state, { payload }) => {
       state.cartItems.push(payload);
+    },
+    setEmail:(state, {payload})=>{
+      state.email = payload
     },
     setDeliveryPrice: (state, { payload }) => {
       if (payload && payload === 0) {
@@ -50,6 +54,7 @@ export const {
   addItem,
   calculateTotals,
   setDeliveryPrice,
+  setEmail,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
