@@ -1,7 +1,12 @@
 import classes from "./ThankYouPage.module.css"
+import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 export default function ThankYouPage() {
-   const email = "Väekivifänn45@gmail.com"
+   const location = useLocation()
+   const searchParams = new URLSearchParams(location.search)
+   const email = searchParams.get('email')
+   console.log(searchParams.get('email'))
    return (
       <div className={classes.TopLevelContainer}>
          <h1 className={classes.Confirmed}>Teie tellimus on kinnitatud!</h1>

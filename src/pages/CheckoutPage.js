@@ -1,23 +1,19 @@
 import "./CheckoutPage.css";
 import CheckoutContainer from "../components/CheckoutComponent/CheckoutContainer.js";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import ShoppingCartMain from "../components/ShoppingCartMain/ShoppingCartMain";
 import Card from "../components/Cards/Card";
-import bolmen from "../assets/bolmen.png";
+import { setEmail } from "../features/cart/cartSlice";
 
 function CheckoutPage() {
+  const dispatch = useDispatch()
+  const emailHandler  = (event)=>{
+    dispatch(setEmail(event.target.value))
+  }
   //redux magic. very good explanation -> https://www.youtube.com/watch?v=bbkBuqC1rU4
-  const { amount, cartItems, total } = useSelector((store) => store.cart);
-  const jsonToSend = {};
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(jsonToSend),
-  };
+  const {cartItems, total, email } = useSelector((store) => store.cart);
+  
   const paymentHandler = () => {
     const randomId = Math.floor(Math.random() * 10000000).toString();
     let payloadObj = {
@@ -26,11 +22,11 @@ function CheckoutPage() {
       access_key: "4e5d2fcd-c766-47c4-aa74-6197cf7ddb5e",
       merchant_reference: randomId,
       merchant_return_url:
-        "https://tatall.pages.taltech.ee/iti0105-2022/#/aitah",
+        "https://tatall.pages.taltech.ee/iti0105-2022/#/aitah?email="+email,
       merchant_notification_url: "https://montonio.com/orders/payment_webhook",
-      payment_information_unstructured: "Payment for order " + randomId,
+      payment_information_unstructured: "Payment for order " +email+" "+ randomId,
       preselected_locale: "et",
-      checkout_email: randomId + "@montonio.com",
+      checkout_email: email,
     };
     console.log(payloadObj, randomId);
     axios
@@ -68,7 +64,7 @@ function CheckoutPage() {
           })}
         </ShoppingCartMain>
       </div>
-
+      
       <div className="totalLabel">
         <b>Kokku: </b> {total}€
       </div>
@@ -79,6 +75,10 @@ function CheckoutPage() {
       <div className="leftContainer">
         <CheckoutContainer />
       </div>
+      <div className="email">  <h3 className="title">Email</h3>
+      <input name="email" placeholder="Email" onChange={emailHandler}></input></div>
+     
+     
     </div>
   );
 }

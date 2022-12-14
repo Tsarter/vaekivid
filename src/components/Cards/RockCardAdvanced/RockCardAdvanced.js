@@ -15,15 +15,15 @@ function RockCardAdvanced(props) {
       >
         <div
           className={classes.rockPersonality}
-          style={{ top: "1rem", backgroundColor: "#E35A2E" }}
+          style={{ backgroundColor: "#E35A2E" }}
         ></div>
         <div
           className={classes.rockPersonality}
-          style={{ top: "2rem", backgroundColor: "#4BA9BD" }}
+          style={{ backgroundColor: "#4BA9BD" }}
         ></div>
         <div
           className={classes.rockPersonality}
-          style={{ top: "3rem", backgroundColor: "#65686D" }}
+          style={{ backgroundColor: "#65686D" }}
         ></div>
         <img
           alt="Pilt kivist."

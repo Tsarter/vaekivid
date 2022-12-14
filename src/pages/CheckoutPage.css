@@ -51,7 +51,7 @@
     font-family: "Rubik", serif;
     font-size: 1.5em;
     border-radius: 8px;
-    grid-area: 4/1;
+    grid-area: 5/1;
     width: fit-content;
     place-self: center;
 }
@@ -70,7 +70,7 @@
     margin-top: 2rem;
     margin-bottom: 1em;
     font-size: 1.5rem;
-    grid-area: 3/1;
+    grid-area: 4/1;
     place-self: center;
 }
 
@@ -78,7 +78,23 @@
     grid-area: 1/1/1/1;
     place-self: center;
 }
-
+.email{
+    grid-area: 3/1;
+    place-self: center;
+    height: 2.4em;
+}
+.email input{
+    height: 2.4em;
+    border-radius: 0.6em;
+    border: none;
+    padding: 0 5px;
+    width: 100%;
+    max-width: 190px;
+   
+}
+.email input:focus {
+    outline: 1px solid rgb(7, 190, 1);
+}
 .CheckoutShoppingCart {
     grid-area: 2/1;
     place-self: flex-start center;
@@ -90,12 +106,16 @@
     .leftContainer {
         grid-area: 3/1;
     }
+    .email{
+        grid-area: 4/1;
+        place-self: center;
+    }
     .payButton {
-        grid-area: 5/1;
+        grid-area: 6/1;
         place-self: center;
     }
     .totalLabel {
-        grid-area: 4/1;
+        grid-area: 5/1;
         place-self: center;
     }
     .shoppingCartTitle {
