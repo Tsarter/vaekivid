@@ -1,20 +1,17 @@
 @import "../index.css";
 .bigContainer {
-    margin-left: 6vw;
-    margin-top: 20vh;
-    margin-bottom: 30vh;
+margin: 6em auto 1em 10em;
 }
 
 .smallContainer {
-    margin: 15vh 8vw;
-    width: 90%;
-    max-width: 800px;
+    max-width: 65%;
+    margin-bottom: 4em;
 }
 
 h1 {
     font-family: "Rubik", serif;
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
 }
 
 p {
