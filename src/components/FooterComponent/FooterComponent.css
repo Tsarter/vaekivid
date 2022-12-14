@@ -1,6 +1,7 @@
 @import "../../index.css";
 .footerContainer {
-    font-size: 16px;
+    font-size: clamp(10px, 1.5vw, 16px);
+    margin-top: 5rem;
 }
 
 .rowFlex {
@@ -36,6 +37,7 @@
 }
 
 .text {
+    flex: 1;
     margin: 2em auto;
     justify-content: center;
     font-family: 'Rubik', serif;

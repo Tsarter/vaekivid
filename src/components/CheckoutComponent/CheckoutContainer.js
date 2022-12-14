@@ -13,7 +13,7 @@ import {
   calculateTotals,
   setDeliveryPrice,
 } from "../../features/cart/cartSlice";
-
+import packet_machines_omniva from "../../test_data/omniva_packet_machines";
 function CheckoutContainer() {
   const { delivery_price } = useSelector((state) => state.cart);
   console.log(delivery_price, delivery_price == 0);
@@ -49,7 +49,10 @@ function CheckoutContainer() {
             alt="Omniva Logo"
             price="2,19 €"
           >
-            <DeliveryInfoComponent title="Otsi pakiautomaati" />
+            <DeliveryInfoComponent
+              title="Otsi pakiautomaati"
+              options={packet_machines_omniva}
+            />
           </CourierOptionComponent>
         </div>
         <div
