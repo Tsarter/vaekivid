@@ -1,7 +1,7 @@
 import classes from "./RockCardAdvanced.module.css";
 import rectangleBlob1 from "../../../assets/rectangleBlob1.svg";
 import { useDispatch } from "react-redux";
-
+import { addItem } from "../../../features/cart/cartSlice";
 function RockCardAdvanced(props) {
   const dispatch = useDispatch();
 
@@ -34,7 +34,12 @@ function RockCardAdvanced(props) {
       <h2 className={classes.name_text}>{props.name}</h2>
       <h2 className={classes.price_text}>{props.price + "€"}</h2>
       <div className={classes.actions}>
-        <button className={classes.btn} onClick={() => {}}>
+        <button
+          className={classes.btn}
+          onClick={() => {
+            dispatch(addItem(props.item));
+          }}
+        >
           Lisa korvi
         </button>
       </div>

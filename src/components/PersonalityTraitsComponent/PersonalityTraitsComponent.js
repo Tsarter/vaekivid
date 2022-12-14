@@ -14,6 +14,7 @@ export default function PersonalityTraitsComponent(props) {
       </div>
       <div className="ContentContainer">
         {Object.keys(personality).map((key, index) => {
+          console.log(personality[key].value);
           return (
             <PersonalityTraitsSliderComponent
               key={index}
