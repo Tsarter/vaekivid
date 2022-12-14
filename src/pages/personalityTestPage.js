@@ -2,6 +2,7 @@ import classes from "./personalityTestPage.module.css";
 import QuestionWithAnswers from "../components/questionWithAnswersComponent/QuestionWithAnswers";
 import { useState } from "react";
 import ButtonContinue from "../components/buttons/buttonContinue/ButtonContinue";
+import sentinoExample from "../test_data/sentino_example";
 // import { createSlice, configureStore } from "redux";
 import { useNavigate } from "react-router-dom";
 {
@@ -44,13 +45,6 @@ function PersonalityTestPage() {
     }
     console.log("clicked");
 
-    /* const { addText } = personalitySlice.actions;
-    const store = configureStore({
-      reducer: personalitySlice.reducer,
-    });
-    store.dispatch(addText("hey"));
-    console.log(store.getState()); */
-
     const options = {
       method: "POST",
       headers: {
@@ -61,15 +55,15 @@ function PersonalityTestPage() {
       body: JSON.stringify(jsonToSend),
     };
     // toComponentB() for fake data
-    toComponentB({});
+    toComponentB(sentinoExample);
     // fetch() for real data
-    /* fetch("https://sentino.p.rapidapi.com/score/text", options)
+    fetch("https://sentino.p.rapidapi.com/score/text", options)
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
         toComponentB(response);
       })
-      .catch((err) => console.error(err)); */
+      .catch((err) => console.error(err));
   };
   return (
     <section className={classes.section}>
@@ -262,6 +256,151 @@ function PersonalityTestPage() {
           children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
           yes="When people shout at me, I shout back."
           no="When people shout at me, I ignore them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="23.Kas Sind piinab sageli süütunne?"
+          yes="I am often plagued by guilt."
+          no="I am rarely plagued by guilt."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
+          yes="When people shout at me, I shout back."
+          no="When people shout at me, I ignore them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="24.Kas pead kõiki oma harjumusi meeldivaiks ja headeks?"
+          yes="I think all my habits are nice and good."
+          no="I think none of my habits are nice or good."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
+          yes="When people shout at me, I shout back."
+          no="When people shout at me, I ignore them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="25.Kas oled suuteline hästi lõbutsema ja end täiesti välja elama mõnel peol?"
+          yes="I'm able to have a good time and totally live it up at some parties."
+          no="I don't like going to parties."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="26.Kas Sinu kohta võib väita, et üsna sageli on Su närvid viimase piirini pingul?"
+          yes="For me, quite often my nerves are stretched to the limit."
+          no="I very rarely get nervous.."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+
+        <QuestionWithAnswers
+          children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
+          yes="When people shout at me, I shout back."
+          no="When people shout at me, I ignore them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="27.Kas Sind loetakse lõbusaks ja elavaks seltskonnakaaslaseks?"
+          yes="I'm considered a fun and lively companion."
+          no="I don't like to be social.."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="28.Kui oled tegelenud millegi olulisega, kas kaalutled hiljem, mida oleks võinud teha paremini?"
+          yes="When I've done something important, I don't reflect later on what I could have done better."
+          no="When people shout at me, I ignore them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="29.Kas oled peamiselt vaikne, kui viibid seltskonnas?"
+          yes="I'm mostly quiet when I'm in company."
+          no="I'm mostly talkative when I'm in company."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="30.Kas on vahel juhtunud, et räägid kuulujutte edasi?"
+          yes="I have sometimes passed on rumours."
+          no="I'm not going to pass on the rumours."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="22.Kui Sinu peale karjutakse, kas vastad samaga?"
+          yes="When people shout at me, I shout back."
+          no="When people shout at me, I ignore them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="31.Kas on juhtunud, et Sa ei suuda sellepärast uinuda, et igasugused mõtted tulevad pähe?"
+          yes="There have been times where I have been unable to sleep because all sorts of thoughts came into my head."
+          no="Thought don't stop me from sleeping."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="32.Kas on õige, et kui tahad millegi kohta teavet, siis eelistad seda otsida iseseisvalt, selle asemel, et sõpradelt-tuttavatelt küsima minna?"
+          yes="I prefer to look for information on my own instead of asking friends for it."
+          no="I prefer to ask friends for information instead of searching independently."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="33.Kas Sul esineb tugevaid südamekloppimisi?"
+          yes="I have severe palpitations."
+          no="I don't experience severe heart palpitations."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="34.Kas Sulle meeldib töö, mis nõuab tähelepanu ning keskendumist?"
+          yes="I like work that requires attention and concentration."
+          no="I don't like work that requires attention and concentration."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="35.Kas käitud alati reeglite järgi, isegi kui teaksid, et keegi nende rikkumisest teada ei saa?"
+          yes="I always obey the rules, even if I know that no one would know if I broke them."
+          no="I don't always play by the rules if I know that no one will find out I'm breaking them."
+          text="Jah"
+          text2="Ei"
+          handleClick={handleClick}
+        />
+        <QuestionWithAnswers
+          children="36.Kas inimeste hulgas, keda Sa tead, on niisuguseid, kes Sulle ei meeldi?"
+          yes="Among the people I know, there are some I don't like."
+          no="Among the people I know, there are no people I don't like."
           text="Jah"
           text2="Ei"
           handleClick={handleClick}

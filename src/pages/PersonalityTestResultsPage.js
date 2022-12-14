@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 /* Api  https://rapidapi.com/bellatrics/api/sentino/*/
-import sentinoExample from "../test_data/sentino_example";
 import { useDispatch, useSelector } from "react-redux";
 import { setPersonalityValue } from "../features/personality/personalitySlice";
 import classes from "./PersonalityTestResultsPage.module.css";
@@ -19,30 +18,24 @@ function PersonalityResultsPage() {
     dispatch(addPersonalRock(storage[2]));
     dispatch(addPersonalRock(storage[3]));
   }, []);
-  const personality = useSelector((state) => state.personality);
   const { personalRocks } = useSelector((state) => state.personalRocks);
   const sentino = location.state;
   console.log(personalRocks);
-  // for fake data
-  const neoFake = sentinoExample.scoring.neo;
   // for real data
-  //const neo = sentino.scoring.neo;
+  const neo = sentino.scoring.neo;
   let text = "";
 
-  for (const property in neoFake) {
-    //console.log(neoFake[property]);
+  for (const property in neo) {
     dispatch(
       setPersonalityValue([
         property,
-        Math.round(neoFake[property].score * 10 + Number.EPSILON) / 10,
+        Math.round(neo[property].score * 10 + Number.EPSILON) / 10,
       ])
     );
-    //console.log("here1", personality);
-    text +=
-      property +
-      ":  " +
-      Math.round(neoFake[property].score * 10 + Number.EPSILON) / 10 +
-      " ";
+    console.log(
+      Math.round(neo[property].score * 20 + Number.EPSILON) / 2,
+      property
+    );
   }
   return (
     <div className={classes.screen}>
@@ -65,6 +58,7 @@ function PersonalityResultsPage() {
               img={item.fields.image[0].url}
               description={item.fields.description}
               bg_color="#D8AA78"
+              item={item}
             />
           );
         })}
