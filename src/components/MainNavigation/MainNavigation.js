@@ -14,6 +14,9 @@ function MainNavigation() {
   const show = () => {
     setshowSideMenu(!showSideMenu);
   };
+  const ScrollTop = () => {
+    window.scrollTo({top: 0, behavior:"smooth"})
+  };
 
   return (
     <div className={classes.sticky}>
@@ -24,17 +27,17 @@ function MainNavigation() {
         <div className={classes.pages}>
           <div>
             <Link to="/">
-              <h4>Kodu</h4>
+              <h4 onClick={ScrollTop}>Kodu</h4>
             </Link>
           </div>
           <div>
             <Link to="/meist">
-              <h4>Meist</h4>
+              <h4 onClick={ScrollTop}>Meist</h4>
             </Link>
           </div>
           <div>
             <Link to="/blogi">
-              <h4>Blogi</h4>
+              <h4 onClick={ScrollTop}>Blogi</h4>
             </Link>
           </div>
           <Link to="/">
