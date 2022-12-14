@@ -14,17 +14,17 @@ export default function SliderButton({ handleValue, noChoosing }) {
         <button
           className="SelectorButton"
           id="plus"
-          onClick={handleValue.increment}
+          onClick={handleValue.decrement}
         >
-          +
+          -
         </button>
         <div className="SelectorNum">{handleValue.val}</div>
         <button
           className="SelectorButton"
           id="minus"
-          onClick={handleValue.decrement}
+          onClick={handleValue.increment}
         >
-          -
+          +
         </button>
       </div>
     );
