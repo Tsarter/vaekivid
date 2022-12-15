@@ -1,20 +1,21 @@
 @import "../index.css";
 .bigContainer {
-    margin-left: 6vw;
-    margin-top: 20vh;
-    margin-bottom: 30vh;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .smallContainer {
-    margin: 15vh 8vw;
-    width: 90%;
-    max-width: 800px;
+    width: 70%;
+    max-width: 60rem;
+    margin-bottom: 3rem;
 }
 
 h1 {
     font-family: "Rubik", serif;
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
 }
 
 p {
